@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Esto tan sólo pinta un rectángulo
+        //window = UIWindow(frame: <#T##CGRect#>)
+        
+        // Crear Window
+        // Para ocupar toda la pantalla - Todavía fallaría
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = UIColor.cyan
+        
+        // Crear RootVC
+        // Tiene que haber un rootController o no arrranca
+        // Tras asignarlo ya se puede arrancar
+        let rootVC = UIViewController()
+        window?.rootViewController = rootVC
+        
         return true
     }
 
