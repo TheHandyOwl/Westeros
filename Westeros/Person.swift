@@ -37,7 +37,7 @@ final class Person{
     }
     
     // Inicializador designado
-    init(name: String, alias: String, house: House) {
+    init(name: String, alias: String?, house: House) {
         
         self.name = name
         _alias = alias
@@ -57,6 +57,35 @@ final class Person{
 
 
 
+// Dejamos la clase y el resto de funcionalidades las metemos en extensiones
+extension Person{
+    var fullName : String{
+        return "\(name) \(house.name)"
+    }
+}
+
+extension Person {
+    var proxy : String{
+        return "\(name) \(_alias) \(house.name)"
+    }
+}
+
+extension Person : Hashable{
+    
+    var hashValue: Int {
+        get{
+            // let proxy = "\(name) \(_alias) \(house.name)"
+            return proxy.hashValue
+        }
+    }
+
+}
+
+extension Person : Equatable {
+    static func ==(lhs: Person, rhs: Person) -> Bool{
+        return lhs.proxy == rhs.proxy
+    }
+}
 
 
 
