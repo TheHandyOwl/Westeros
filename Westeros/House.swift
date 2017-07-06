@@ -17,7 +17,7 @@ typealias Words = String
 typealias Members = Set<Person>
 
 final class House{
-   
+    
     let name    : String
     let sigil   : Sigil
     let words   : Words
@@ -47,7 +47,7 @@ extension House{
     func add(person: Person){
         
         //guard person.house == self else { // self no es equatable, tenemos que implementarlo
-        guard person.house.name == name else { // como no hay tiempo probamos con otro y queda pendiente que desarrollemos el punto anterios
+        guard person.house.name == self.name else { // como no hay tiempo probamos con otro y queda pendiente que desarrollemos el punto anterios
             return // Aquí saldríamos y no haríamos nada
         }
         _members.insert(person)

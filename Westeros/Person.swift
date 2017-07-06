@@ -47,7 +47,7 @@ final class Person{
     // Otro inicializador designado sin el alias
     // command + shift + 7 comenta la selección
     convenience init(name: String, house: House){
-        self.init(name: name, alias:nil, house: house)
+        self.init(name: name, alias: nil, house: house)
     }
     
     // Inicializador de conveniencia
@@ -66,7 +66,7 @@ extension Person{
 
 extension Person {
     var proxy : String{
-        return "\(name) \(_alias) \(house.name)"
+        return "\(name) \(alias) \(house.name)"
     }
 }
 

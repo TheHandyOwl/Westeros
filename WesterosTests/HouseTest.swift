@@ -17,8 +17,8 @@ class HouseTest: XCTestCase {
     var starkSigil : Sigil!
     var lannisterSigil : Sigil!
     
-    var starkHouse = House!
-    var lannisterHouse = House!
+    var starkHouse : House!
+    var lannisterHouse : House!
     
     var robb : Person!
     var arya: Person!
