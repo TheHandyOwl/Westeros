@@ -1,19 +1,24 @@
 //
-//  WesterosTests.swift
-//  WesterosTests
+//  CharacterTest.swift
+//  Westeros
 //
-//  Created by Carlos on 5/7/17.
+//  Created by Carlos on 6/7/17.
 //  Copyright © 2017 THO. All rights reserved.
 //
 
 import XCTest
 @testable import Westeros
 
-class WesterosTests: XCTestCase {
+class PersonTest: XCTestCase {
+    
+    var starkHouse: House!
+    var starkSigil: Sigil!
     
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is comming!")
     }
     
     override func tearDown() {
@@ -31,6 +36,15 @@ class WesterosTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testPersonExistence(){
+        
+        // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
+        // Para evitar el conflicto de Character vs Westeros.Character
+        // Lo suyo es refactorizar
+        let ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
+        XCTAssertNotNil(ned)
     }
     
 }
