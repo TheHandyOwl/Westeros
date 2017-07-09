@@ -58,11 +58,13 @@ class HouseTest: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
     func testHouseExistence(){
         let starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
         let stark = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
         XCTAssertNotNil(stark)
     }
+    
     func testSigilExistence(){
         let starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
         XCTAssertNotNil(starkSigil)
@@ -70,6 +72,7 @@ class HouseTest: XCTestCase {
         let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Rampant Lion")
         XCTAssertNotNil(lannisterSigil)
     }
+    
     func testAddPersons(){
         XCTAssertEqual(starkHouse.count, 0)
         starkHouse.add(person: robb)
@@ -82,6 +85,13 @@ class HouseTest: XCTestCase {
         starkHouse.add(person: tyrion) // Esto es erróneo porque no pertenece a esta casa
         XCTAssertEqual(starkHouse.count, 2) // Este test debería mantenerse en 2 y no en 3
         
+    }
+    
+    func testCompareHouse(){
+        XCTAssertLessThan(lannisterHouse, starkHouse)
+        XCTAssertLessThanOrEqual(lannisterHouse, lannisterHouse)
+        XCTAssertGreaterThan(starkHouse, lannisterHouse)
+        XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
     }
     
 }
