@@ -23,11 +23,14 @@ class HouseViewController: UIViewController {
         self.title = model.name
         
         let appearance = UITabBarItem.appearance()
-        let attributes_selected: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.darkGray]
-        appearance.setTitleTextAttributes(attributes_selected, for: .selected)
-        let attributes_normal: [String: AnyObject] = [NSForegroundColorAttributeName: UIColor.lightGray]
-        appearance.setTitleTextAttributes(attributes_normal, for: .normal)
-        
+        let attributesSelected: [String: Any] = [
+            NSForegroundColorAttributeName: UIColor.darkGray
+        ]
+        appearance.setTitleTextAttributes(attributesSelected, for: .selected)
+        let attributesNormal: [String: Any] = [
+            NSForegroundColorAttributeName: UIColor.lightGray
+        ]
+        appearance.setTitleTextAttributes(attributesNormal, for: .normal)
     }
     
     //Parche de los de Cupertino (relacionada con los nil)
