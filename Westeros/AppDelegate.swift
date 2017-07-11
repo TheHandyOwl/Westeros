@@ -53,7 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Creamos el TabBar
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [lannisterNav, starkNav]
+        //tabVC.viewControllers = [lannisterNav, starkNav]
+        tabVC.viewControllers = [lannisterVC.wrappedInNavigation(), starkVC.wrappedInNavigation()]
         
         // Asignamos el RootVC
         //window?.rootViewController = starkNav

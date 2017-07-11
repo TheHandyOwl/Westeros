@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0700B4EC1F141A1500975924 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700B4EA1F141A1500975924 /* HouseViewController.swift */; };
 		0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0700B4EB1F141A1500975924 /* HouseViewController.xib */; };
+		073FB2821F155DC400CC2E62 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */; };
 		078845661F0EC87700F0106B /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078845641F0EC87700F0106B /* lannister.jpg */; };
 		078845671F0EC87700F0106B /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = 078845651F0EC87700F0106B /* codeIsComing.png */; };
 		0788456A1F0ECABB00F0106B /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078845691F0ECABB00F0106B /* PersonTest.swift */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		0700B4EA1F141A1500975924 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		0700B4EB1F141A1500975924 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		078845641F0EC87700F0106B /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		078845651F0EC87700F0106B /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
 		078845691F0ECABB00F0106B /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		073FB2801F155DA300CC2E62 /* Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */,
+			);
+			name = Cocoa;
+			sourceTree = "<group>";
+		};
 		078845631F0EC25A00F0106B /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +124,7 @@
 		079D5A271F0C47E30027D8F5 /* Westeros */ = {
 			isa = PBXGroup;
 			children = (
+				073FB2801F155DA300CC2E62 /* Cocoa */,
 				078845681F0EC87E00F0106B /* Resources */,
 				0736A2AD1F1412A400B71D1F /* Controllers */,
 				078845631F0EC25A00F0106B /* Models */,
@@ -245,6 +256,7 @@
 				07B89C971F0EF3E0008DE341 /* House.swift in Sources */,
 				0788456C1F0ECDA800F0106B /* Person.swift in Sources */,
 				0700B4EC1F141A1500975924 /* HouseViewController.swift in Sources */,
+				073FB2821F155DC400CC2E62 /* UIKitExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
