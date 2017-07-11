@@ -37,12 +37,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let starkVC = HouseViewController(model: starkHouse)
         let lannisterVC = HouseViewController(model: lannisterHouse)
         
+        
         // Creamos el combinador - Es indiferente cualquiera de las 2 formas
-        //let tabVC = UITabBarController(nibName: nil, bundle: nil)
+        // let tabVC = UITabBarController(nibName: nil, bundle: nil)
+        // let tabVC = UITabBarController()
+        // tabVC.viewControllers = [lannisterVC, starkVC]
+        // let starkNav = UINavigationController()
+        // starkNav.pushViewController(starkVC, animated: false)
+        // Resumido
+        // let starkNav = UINavigationController(rootViewController: starkVC)
+        
+        //Creamos los Navigations
+        let starkNav = UINavigationController(rootViewController: starkVC)
+        let lannisterNav = UINavigationController(rootViewController: lannisterVC)
+        
+        // Creamos el TabBar
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [lannisterVC, starkVC]
+        tabVC.viewControllers = [lannisterNav, starkNav]
         
         // Asignamos el RootVC
+        //window?.rootViewController = starkNav
         window?.rootViewController = tabVC
         
         // Crear RootVC

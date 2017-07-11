@@ -19,18 +19,16 @@ class HouseViewController: UIViewController {
     
     init(model: House){
         self.model = model
+        // Si metemos aquí el title = model.name petaría
         super.init(nibName: nil, bundle: nil)
-        self.title = model.name
         
-        let appearance = UITabBarItem.appearance()
-        let attributesSelected: [String: Any] = [
-            NSForegroundColorAttributeName: UIColor.darkGray
-        ]
-        appearance.setTitleTextAttributes(attributesSelected, for: .selected)
-        let attributesNormal: [String: Any] = [
-            NSForegroundColorAttributeName: UIColor.lightGray
-        ]
-        appearance.setTitleTextAttributes(attributesNormal, for: .normal)
+        // Tras el super.init
+        // Tras inicializar
+        title = model.name
+        
+        // Se puede poner aquí un color para la barra de botones
+        // Pero mejor no poner nada de la vista aquí
+        // Puede que pete con Objective C
     }
     
     //Parche de los de Cupertino (relacionada con los nil)
@@ -51,4 +49,19 @@ class HouseViewController: UIViewController {
         syncViewWithModel()
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        UITabBar.appearance().backgroundColor = UIColor.gray
+        
+        let appearance = UITabBarItem.appearance()
+        let attributesSelected: [String: Any] = [
+            NSForegroundColorAttributeName: UIColor.darkGray
+        ]
+        appearance.setTitleTextAttributes(attributesSelected, for: .selected)
+        let attributesNormal: [String: Any] = [
+            NSForegroundColorAttributeName: UIColor.lightGray
+        ]
+        appearance.setTitleTextAttributes(attributesNormal, for: .normal)
+    }
 }
