@@ -27,34 +27,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.cyan
         
         // Creamos uno modelos
-        let starkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Direwolf")
-        let starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
-        
-        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Rampant Lion")
-        let lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!")
+        let houses = Repository.local.houses
         
         // Creamos los controladores
-        let starkVC = HouseViewController(model: starkHouse)
-        let lannisterVC = HouseViewController(model: lannisterHouse)
-        
-        
-        // Creamos el combinador - Es indiferente cualquiera de las 2 formas
-        // let tabVC = UITabBarController(nibName: nil, bundle: nil)
-        // let tabVC = UITabBarController()
-        // tabVC.viewControllers = [lannisterVC, starkVC]
-        // let starkNav = UINavigationController()
-        // starkNav.pushViewController(starkVC, animated: false)
-        // Resumido
-        // let starkNav = UINavigationController(rootViewController: starkVC)
+        var controllers = [HouseViewController]()
+        for house in houses{
+            controllers.append(HouseViewController(model: house))
+        }
         
         //Creamos los Navigations
-        let starkNav = UINavigationController(rootViewController: starkVC)
-        let lannisterNav = UINavigationController(rootViewController: lannisterVC)
+        var navs = [UINavigationController]()
+        for controller in controllers{
+            navs.append(UINavigationController(rootViewController: controller))
+        }
         
         // Creamos el TabBar
         let tabVC = UITabBarController()
-        //tabVC.viewControllers = [lannisterNav, starkNav]
-        tabVC.viewControllers = [lannisterVC.wrappedInNavigation(), starkVC.wrappedInNavigation()]
+        tabVC.viewControllers = navs
         
         // Asignamos el RootVC
         //window?.rootViewController = starkNav
