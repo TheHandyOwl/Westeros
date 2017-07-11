@@ -1,5 +1,5 @@
 //
-//  CharacterTest.swift
+//  PersonTest.swift
 //  Westeros
 //
 //  Created by Carlos on 6/7/17.
@@ -43,7 +43,6 @@ class PersonTest: XCTestCase {
         arya = Person(name: "Arya", house: starkHouse)
         tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
         
-        ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
     }
     
     override func tearDown() {
@@ -68,7 +67,7 @@ class PersonTest: XCTestCase {
         // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
         // Para evitar el conflicto de Character vs Westeros.Character
         // Lo suyo es refactorizar
-        XCTAssertNotNil(ned)
+        XCTAssertNotNil(tyrion)
     }
     
     func testFullName(){
@@ -76,14 +75,31 @@ class PersonTest: XCTestCase {
         // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
         // Para evitar el conflicto de Character vs Westeros.Character
         // Lo suyo es refactorizar
-        XCTAssertEqual(ned.fullName, "Eddard Stark")
+        XCTAssertEqual(tyrion.fullName, "Tyrion Lannister")
     }
     
+    // Mi solución para el test Person
     func testComparePerson(){
         XCTAssertLessThan(arya, robb)
         XCTAssertLessThanOrEqual(arya, arya)
         XCTAssertGreaterThan(tyrion, robb)
         XCTAssertGreaterThanOrEqual(tyrion, tyrion)
     }
+    
+    // Solución para el test Person
+    func testPersonEquality(){
+        
+        //Identidad
+        XCTAssertEqual(tyrion, tyrion)
+        
+        // Igualdad
+        let imp = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
+        XCTAssertEqual(imp, tyrion)
+        
+        // Desigualdad
+        XCTAssertNotEqual(tyrion, arya)
+        
+    }
+    
 
 }

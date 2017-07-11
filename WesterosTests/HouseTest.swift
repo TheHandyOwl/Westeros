@@ -86,12 +86,43 @@ class HouseTest: XCTestCase {
         XCTAssertEqual(starkHouse.count, 2) // Este test debería mantenerse en 2 y no en 3
         
     }
-    
+
+    // Mi solución para el test House
     func testCompareHouse(){
         XCTAssertLessThan(lannisterHouse, starkHouse)
         XCTAssertLessThanOrEqual(lannisterHouse, lannisterHouse)
         XCTAssertGreaterThan(starkHouse, lannisterHouse)
         XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
     }
+
+    // Solución para el test House - Equality
+    func testPersonEquality(){
+        
+        //Identidad
+        XCTAssertEqual(starkHouse, starkHouse)
+        
+        // Igualdad
+        // jinxed = gafado
+        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
+        XCTAssertEqual(jinxed, starkHouse)
+        
+        // Desigualdad
+        XCTAssertNotEqual(starkHouse, lannisterHouse)
+    }
     
+    // Solución para el test House - Hashable
+    func testHashable(){
+        XCTAssertNotNil(starkHouse.hashValue)
+    }
+    
+    // Solución para el test House - Comparable
+    func testHouseComparison(){
+        
+        XCTAssertLessThan(lannisterHouse, starkHouse)
+        XCTAssertLessThanOrEqual(lannisterHouse, lannisterHouse)
+        XCTAssertGreaterThan(starkHouse, lannisterHouse)
+        XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
+        
+    }
+
 }
