@@ -33,4 +33,13 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(houses.count, 2)
     }
     
+    // Ejercicio - Devolver la casa a partir del nombre
+    func testGetHouseFromName(){
+        let lannister = Repository.local.house(named: "Lannister")
+        XCTAssertNotNil(lannister)
+
+        let wololo = Repository.local.house(named: "Wololo")
+        XCTAssertNil(wololo)
+    }
+    
 }

@@ -27,6 +27,14 @@ final class House{
         (self.name, self.sigil, self.words) = (name, sigil, words)
         _members = Members()
     }
+    
+    /*
+    var members : Members{
+        get{
+            return _members ?? []
+        }
+    }
+    */
 }
 
 final class Sigil{
@@ -47,7 +55,7 @@ extension House{
     func add(person: Person){
         
         //guard person.house == self else { // self no es equatable, tenemos que implementarlo
-        guard person.house.name == self.name else { // como no hay tiempo probamos con otro y queda pendiente que desarrollemos el punto anterios
+        guard person.house.name == self.name else { // como no hay tiempo probamos con otro y queda pendiente que desarrollemos el punto anterior
             return // Aquí saldríamos y no haríamos nada
         }
         _members.insert(person)

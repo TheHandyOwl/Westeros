@@ -17,6 +17,7 @@ final class Repository{
 protocol HouseFactory {
     
     var houses : [House] { get }
+    func house(named: String) -> House?
     
 }
 
@@ -45,5 +46,12 @@ final class LocalFactory : HouseFactory{
             return [stark, lannister].sorted()
             
         }
+    }
+}
+
+extension LocalFactory{
+    func house(named: String) -> House?{
+        let theHouse : House? = houses.filter({$0.name == named}).first
+        return theHouse
     }
 }
