@@ -12,6 +12,10 @@
 		073FB2821F155DC400CC2E62 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */; };
 		073FB2841F15608500CC2E62 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FB2831F15608500CC2E62 /* RepositoryTests.swift */; };
 		073FB2861F15623000CC2E62 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FB2851F15623000CC2E62 /* Repository.swift */; };
+		0751E7451F1AA5DA001AE9B9 /* mormont.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751E7441F1AA5DA001AE9B9 /* mormont.png */; };
+		0751E74D1F1AA97B001AE9B9 /* targaryen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751E74C1F1AA97B001AE9B9 /* targaryen.png */; };
+		0751E74F1F1AA9AD001AE9B9 /* tyrell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751E74E1F1AA9AD001AE9B9 /* tyrell.png */; };
+		0751E7511F1AD5E6001AE9B9 /* greyjoy.png in Resources */ = {isa = PBXBuildFile; fileRef = 0751E7501F1AD5E6001AE9B9 /* greyjoy.png */; };
 		078845661F0EC87700F0106B /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 078845641F0EC87700F0106B /* lannister.jpg */; };
 		078845671F0EC87700F0106B /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = 078845651F0EC87700F0106B /* codeIsComing.png */; };
 		0788456A1F0ECABB00F0106B /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078845691F0ECABB00F0106B /* PersonTest.swift */; };
@@ -39,6 +43,10 @@
 		073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
 		073FB2831F15608500CC2E62 /* RepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		073FB2851F15623000CC2E62 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		0751E7441F1AA5DA001AE9B9 /* mormont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mormont.png; sourceTree = "<group>"; };
+		0751E74C1F1AA97B001AE9B9 /* targaryen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = targaryen.png; sourceTree = "<group>"; };
+		0751E74E1F1AA9AD001AE9B9 /* tyrell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tyrell.png; sourceTree = "<group>"; };
+		0751E7501F1AD5E6001AE9B9 /* greyjoy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greyjoy.png; sourceTree = "<group>"; };
 		078845641F0EC87700F0106B /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		078845651F0EC87700F0106B /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
 		078845691F0ECABB00F0106B /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
@@ -103,7 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				078845651F0EC87700F0106B /* codeIsComing.png */,
+				0751E7501F1AD5E6001AE9B9 /* greyjoy.png */,
 				078845641F0EC87700F0106B /* lannister.jpg */,
+				0751E7441F1AA5DA001AE9B9 /* mormont.png */,
+				0751E74C1F1AA97B001AE9B9 /* targaryen.png */,
+				0751E74E1F1AA9AD001AE9B9 /* tyrell.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -239,8 +251,12 @@
 				078845661F0EC87700F0106B /* lannister.jpg in Resources */,
 				079D5A331F0C47E30027D8F5 /* LaunchScreen.storyboard in Resources */,
 				0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */,
+				0751E7511F1AD5E6001AE9B9 /* greyjoy.png in Resources */,
 				079D5A301F0C47E30027D8F5 /* Assets.xcassets in Resources */,
+				0751E74D1F1AA97B001AE9B9 /* targaryen.png in Resources */,
 				078845671F0EC87700F0106B /* codeIsComing.png in Resources */,
+				0751E7451F1AA5DA001AE9B9 /* mormont.png in Resources */,
+				0751E74F1F1AA9AD001AE9B9 /* tyrell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

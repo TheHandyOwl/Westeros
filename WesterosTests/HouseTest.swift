@@ -40,6 +40,7 @@ class HouseTest: XCTestCase {
         arya = Person(name: "Arya", house: starkHouse)
         tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
         
+        
     }
     
     override func tearDown() {
@@ -60,16 +61,14 @@ class HouseTest: XCTestCase {
     }
     
     func testHouseExistence(){
-        let starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
-        let stark = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
-        XCTAssertNotNil(stark)
+        XCTAssertNotNil(starkHouse)
     }
     
     func testSigilExistence(){
-        let starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
+        starkSigil = starkHouse.sigil
         XCTAssertNotNil(starkSigil)
         
-        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Rampant Lion")
+        lannisterSigil = lannisterHouse.sigil
         XCTAssertNotNil(lannisterSigil)
     }
     
@@ -86,7 +85,7 @@ class HouseTest: XCTestCase {
         XCTAssertEqual(starkHouse.count, 2) // Este test debería mantenerse en 2 y no en 3
         
     }
-
+    
     // Mi solución para el test House
     func testCompareHouse(){
         XCTAssertLessThan(lannisterHouse, starkHouse)
@@ -94,7 +93,7 @@ class HouseTest: XCTestCase {
         XCTAssertGreaterThan(starkHouse, lannisterHouse)
         XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
     }
-
+    
     // Solución para el test House - Equality
     func testPersonEquality(){
         
@@ -124,5 +123,5 @@ class HouseTest: XCTestCase {
         XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
         
     }
-
+    
 }
