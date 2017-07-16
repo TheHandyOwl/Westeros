@@ -18,6 +18,8 @@ protocol HouseFactory {
     
     var houses : [House] { get }
     func house(named: String) -> House?
+    func houses(filteredByName: String) -> [House]?
+    func houses(filteredByMembersMoreThanOrEqualTo: Int) -> [House]?
     
 }
 
@@ -114,5 +116,14 @@ final class LocalFactory : HouseFactory{
 extension LocalFactory{
     func house(named: String) -> House?{
         return houses.first {$0.name == named}
+    }
+}
+
+extension LocalFactory{
+    func houses(filteredByName filter: String) -> [House]?{
+        return houses.filter {$0.name == filter}
+    }
+    func houses(filteredByMembersMoreThanOrEqualTo filter: Int) -> [House]?{
+        return houses.filter {$0.count >= filter}
     }
 }

@@ -11,6 +11,8 @@ import XCTest
 
 class RepositoryTests: XCTestCase {
 
+    var localData : LocalFactory!
+    
     var houses : [House]!
     var lannisterHouse : House?
     var wololoHouse : House?
@@ -18,6 +20,9 @@ class RepositoryTests: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        localData = Repository.local
+        
         houses = Repository.local.houses
         lannisterHouse = Repository.local.house(named: "Lannister")
         wololoHouse = Repository.local.house(named: "Wololo")
@@ -58,6 +63,8 @@ class RepositoryTests: XCTestCase {
     
     // Ejercicio - Filtrar una casa por un parámetro
     func testHouseFilter(){
+
+        /*
         var housesFiltered : [House]
         
         housesFiltered = houses.filter {$0.name == "Stark"}
@@ -66,6 +73,10 @@ class RepositoryTests: XCTestCase {
         housesFiltered = houses.filter {$0.count >= 4}
         print(housesFiltered)
         XCTAssertEqual(housesFiltered.count, 3)
+        */
+        
+        XCTAssertEqual(localData.houses(filteredByName: "Stark")?.count, 1)
+        XCTAssertEqual(localData.houses(filteredByMembersMoreThanOrEqualTo: 4)?.count, 3)
     }
     
 }
