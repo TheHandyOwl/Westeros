@@ -46,4 +46,25 @@ class RepositoryTests: XCTestCase {
         XCTAssertNil(wololoHouse)
     }
     
+    // Ejercicio - Devolver casas ordenadas
+    func testCompareSortedHouses(){
+        let housesA : [House] = Repository.local.houses
+        let housesB : [House] = housesA
+        
+        for a in housesA{
+            for b in housesB {
+                if a < b{
+                    //print ("Compare >> " + a.name + "<" + b.name)
+                    XCTAssertLessThan(a.name, b.name)
+                } else if a > b{
+                    //print ("Compare >>: " + a.name + ">" + b.name)
+                    XCTAssertGreaterThan(a.name, b.name)
+                } else {
+                    //print ("Compare >>: " + a.name + "==" + b.name)
+                    XCTAssertEqual(a.name, b.name)
+                }
+            }
+        }
+    }
+    
 }
