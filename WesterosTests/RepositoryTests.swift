@@ -37,7 +37,7 @@ class RepositoryTests: XCTestCase {
     // Repositorio Local
     func testLocalRepositoryHousesCreation(){
         XCTAssertNotNil(houses)
-        XCTAssertEqual(houses.count, 3)
+        XCTAssertEqual(houses.count, 6)
     }
     
     // Ejercicio - Devolver la casa a partir del nombre
