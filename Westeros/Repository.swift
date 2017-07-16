@@ -113,7 +113,6 @@ final class LocalFactory : HouseFactory{
 
 extension LocalFactory{
     func house(named: String) -> House?{
-        let house : House? = houses.first {$0.name == named}
-        return house
+        return houses.first {$0.name == named}
     }
 }
