@@ -27,14 +27,7 @@ final class House{
         (self.name, self.sigil, self.words) = (name, sigil, words)
         _members = Members()
     }
-    
-    /*
-    var members : Members{
-        get{
-            return _members ?? []
-        }
-    }
-    */
+
 }
 
 final class Sigil{
