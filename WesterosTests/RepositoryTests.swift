@@ -48,22 +48,12 @@ class RepositoryTests: XCTestCase {
     
     // Ejercicio - Devolver casas ordenadas
     func testCompareSortedHouses(){
-        let housesA : [House] = Repository.local.houses
-        let housesB : [House] = housesA
+        let houses : [House] = Repository.local.houses
+        var index = 0
         
-        for a in housesA{
-            for b in housesB {
-                if a < b{
-                    //print ("Compare >> " + a.name + "<" + b.name)
-                    XCTAssertLessThan(a.name, b.name)
-                } else if a > b{
-                    //print ("Compare >>: " + a.name + ">" + b.name)
-                    XCTAssertGreaterThan(a.name, b.name)
-                } else {
-                    //print ("Compare >>: " + a.name + "==" + b.name)
-                    XCTAssertEqual(a.name, b.name)
-                }
-            }
+        while index < houses.count - 1 {
+            XCTAssertLessThanOrEqual(houses[index], houses[index+1])
+            index += 1
         }
     }
     
