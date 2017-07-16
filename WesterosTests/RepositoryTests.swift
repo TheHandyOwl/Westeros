@@ -19,18 +19,16 @@ class RepositoryTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
         
         localData = Repository.local
         
-        houses = Repository.local.houses
-        lannisterHouse = Repository.local.house(named: "Lannister")
-        wololoHouse = Repository.local.house(named: "Wololo")
+        houses = localData.houses
+        lannisterHouse = localData.house(named: "Lannister")
+        wololoHouse = localData.house(named: "Wololo")
     
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
@@ -63,7 +61,6 @@ class RepositoryTests: XCTestCase {
     
     // Ejercicio - Filtrar una casa por un parámetro
     func testHouseFilter(){
-
         /*
         var housesFiltered : [House]
         
@@ -80,3 +77,12 @@ class RepositoryTests: XCTestCase {
     }
     
 }
+
+
+
+
+
+
+
+
+

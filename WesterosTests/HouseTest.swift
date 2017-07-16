@@ -11,12 +11,11 @@ import XCTest
 
 class HouseTest: XCTestCase {
     
-    var starkImage : UIImage!
-    var lannisterImage : UIImage!
+    var localData : LocalFactory!
     
     var starkSigil : Sigil!
     var lannisterSigil : Sigil!
-    
+ 
     var starkHouse : House!
     var lannisterHouse : House!
     
@@ -27,39 +26,22 @@ class HouseTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        starkImage = #imageLiteral(resourceName: "codeIsComing.png")
-        lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
+        starkHouse = localData.house(named: "Stark")
+        lannisterHouse = localData.house(named: "Lannister")
         
-        starkSigil = Sigil(image: starkImage, description: "Direwolf")
-        lannisterSigil = Sigil(image: lannisterImage, description: "Rampant Lion")
-        
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!")
+        starkSigil = starkHouse.sigil
+        lannisterSigil = lannisterHouse.sigil
         
         robb = Person(name: "Robb", alias: "The young wolf", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
         tyrion = Person(name: "Tyrion", alias: "The Imp", house: lannisterHouse)
         
-        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
     func testHouseExistence(){
         XCTAssertNotNil(starkHouse)
     }
@@ -116,12 +98,19 @@ class HouseTest: XCTestCase {
     
     // Solución para el test House - Comparable
     func testHouseComparison(){
-        
         XCTAssertLessThan(lannisterHouse, starkHouse)
         XCTAssertLessThanOrEqual(lannisterHouse, lannisterHouse)
         XCTAssertGreaterThan(starkHouse, lannisterHouse)
         XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
-        
     }
     
 }
+
+
+
+
+
+
+
+
+

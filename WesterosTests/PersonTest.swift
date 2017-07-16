@@ -46,24 +46,10 @@ class PersonTest: XCTestCase {
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
     func testPersonExistence(){
-        
         // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
         // Para evitar el conflicto de Character vs Westeros.Character
         // Lo suyo es refactorizar
@@ -71,7 +57,6 @@ class PersonTest: XCTestCase {
     }
     
     func testFullName(){
-        
         // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
         // Para evitar el conflicto de Character vs Westeros.Character
         // Lo suyo es refactorizar
@@ -101,5 +86,14 @@ class PersonTest: XCTestCase {
         
     }
     
-
 }
+
+
+
+
+
+
+
+
+
+
