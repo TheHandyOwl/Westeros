@@ -72,8 +72,13 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(housesFiltered.count, 3)
         */
         
+        
         XCTAssertEqual(localData.houses(filteredByName: "Stark")?.count, 1)
         XCTAssertEqual(localData.houses(filteredByMembersMoreThanOrEqualTo: 4)?.count, 3)
+
+        XCTAssertEqual(localData.houses(filteredBy: EqualToHouseName)?.count, 1)
+        XCTAssertEqual(localData.houses(filteredBy: moreThanOrEqualToMembers)?.count, 3)
+        
     }
     
 }

@@ -20,10 +20,12 @@ protocol HouseFactory {
     func house(named: String) -> House?
     func houses(filteredByName: String) -> [House]?
     func houses(filteredByMembersMoreThanOrEqualTo: Int) -> [House]?
+    func houses(filteredBy: (House) -> Bool) -> [House]?
     
 }
 
 final class LocalFactory : HouseFactory{
+    
     var houses: [House]{
         get{
             // Aquí es donde te creas tus casas
@@ -120,10 +122,35 @@ extension LocalFactory{
 }
 
 extension LocalFactory{
+    
     func houses(filteredByName filter: String) -> [House]?{
         return houses.filter {$0.name == filter}
     }
     func houses(filteredByMembersMoreThanOrEqualTo filter: Int) -> [House]?{
         return houses.filter {$0.count >= filter}
     }
+    func houses(filteredBy: (House) -> Bool) -> [House]?{
+        return houses.filter { filteredBy($0) }
+    }
+
 }
+
+func EqualToHouseName(_ house: House) -> Bool {
+    return (house.name == "Stark" ? true : false)
+}
+func moreThanOrEqualToMembers(_ house: House) -> Bool {
+    return (house.count >= 4 ? true : false)
+}
+func lessThanOrEqualToMembers(_ house: House) -> Bool {
+    return (house.count <= 1 ? true : false)
+}
+
+
+
+
+
+
+
+
+
+
