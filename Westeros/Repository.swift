@@ -84,32 +84,46 @@ final class LocalFactory : HouseFactory{
             let olenna  = Person(name: "Olenna", alias: "Queen of Thorns", house: tyrell)
             
             // Añadir los personajes a las casas
+            /*
             stark.add(person: robb)
             stark.add(person: arya)
             stark.add(person: sansa)
             stark.add(person: brandon)
             stark.add(person: rickon)
+            */
+            // Variatic version
+            stark.add(persons: robb, arya, sansa, brandon, rickon)
             
-            
+            /*
             lannister.add(person: tyrion)
             lannister.add(person: cersei)
             lannister.add(person: jaime)
             lannister.add(person: tywin)
+            */
+            lannister.add(persons: tyrion, cersei, jaime, tywin)
             
             mormont.add(person: lyanna)
             
+            /*
             greyjoy.add(person: asha)
             greyjoy.add(person: theon)
             greyjoy.add(person: euron)
+            */
+            greyjoy.add(persons: asha, theon, euron)
             
+            /*
             targaryen.add(person: daenerys)
             targaryen.add(person: viserys)
+            */
+            targaryen.add(persons: daenerys, viserys)
             
+            /*
             tyrell.add(person: mace)
             tyrell.add(person: loras)
             tyrell.add(person: margaery)
             tyrell.add(person: olenna)
-            
+            */
+            tyrell.add(persons: mace, loras, margaery, olenna)
             
             // Esto queda pendiente de comprobar con un test
             // Aquí estamos ordenando. Si queremos estar seguros 

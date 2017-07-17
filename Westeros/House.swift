@@ -53,6 +53,13 @@ extension House{
         }
         _members.insert(person)
     }
+    // Función variádica <<<--- Revisar!!!
+    // Variadic version
+    func add(persons: Person...){
+        for person in persons{
+            add(person: person)
+        }
+    }
 }
 
 extension House{
