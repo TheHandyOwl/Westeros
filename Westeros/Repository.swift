@@ -20,7 +20,10 @@ protocol HouseFactory {
     func house(named: String) -> House?
     func houses(filteredByName: String) -> [House]?
     func houses(filteredByMembersMoreThanOrEqualTo: Int) -> [House]?
-    func houses(filteredBy: (House) -> Bool) -> [House]?
+    //func houses(filteredBy: (House) -> Bool) -> [House]?
+
+    typealias Filter = (House) -> Bool
+    func houses(filteredBy: Filter) -> [House]
     
 }
 
@@ -109,6 +112,9 @@ final class LocalFactory : HouseFactory{
             
             
             // Esto queda pendiente de comprobar con un test
+            // Aquí estamos ordenando. Si queremos estar seguros 
+            // el test es comparar las casas que tenemos (que ya vienen ordenadas)
+            // y las volvemos a ordenar para comparar
             return [stark, lannister, mormont, greyjoy, targaryen, tyrell].sorted()
             
         }
@@ -117,7 +123,12 @@ final class LocalFactory : HouseFactory{
 
 extension LocalFactory{
     func house(named: String) -> House?{
-        return houses.first {$0.name == named}
+        // Ambas sirven
+        // return houses.first {$0.name == named}
+        // Variante
+        // return houses.first {$0.name.uppercased() == named.uppercased()}
+        let house = houses.filter{$0.name.uppercased() == named.uppercased()}.first
+        return house
     }
 }
 
@@ -129,10 +140,16 @@ extension LocalFactory{
     func houses(filteredByMembersMoreThanOrEqualTo filter: Int) -> [House]?{
         return houses.filter {$0.count >= filter}
     }
+    /*
     func houses(filteredBy: (House) -> Bool) -> [House]?{
         return houses.filter { filteredBy($0) }
     }
-
+ */
+    func houses(filteredBy: Filter) -> [House]{
+        let filtered = Repository.local.houses.filter(filteredBy)
+        return filtered
+    }
+   
 }
 
 func EqualToHouseName(_ house: House) -> Bool {

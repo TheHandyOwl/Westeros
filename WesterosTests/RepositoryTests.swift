@@ -51,19 +51,22 @@ class RepositoryTests: XCTestCase {
     
     // Ejercicio - Devolver casas ordenadas
     func testCompareSortedHouses(){
+        /*
         var index = 0
         
         while index < houses.count - 1 {
             XCTAssertLessThanOrEqual(houses[index], houses[index+1])
             index += 1
         }
+        */
+        XCTAssertEqual(localData.houses, localData.houses.sorted())
     }
     
     // Ejercicio - Filtrar una casa por un parámetro
     func testHouseFilter(){
-        /*
         var housesFiltered : [House]
         
+        /*
         housesFiltered = houses.filter {$0.name == "Stark"}
         XCTAssertEqual(housesFiltered.count, 1)
         
@@ -76,9 +79,15 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(localData.houses(filteredByName: "Stark")?.count, 1)
         XCTAssertEqual(localData.houses(filteredByMembersMoreThanOrEqualTo: 4)?.count, 3)
 
-        XCTAssertEqual(localData.houses(filteredBy: EqualToHouseName)?.count, 1)
-        XCTAssertEqual(localData.houses(filteredBy: moreThanOrEqualToMembers)?.count, 3)
+        //XCTAssertEqual(localData.houses(filteredBy: EqualToHouseName)?.count, 1)
+        //XCTAssertEqual(localData.houses(filteredBy: moreThanOrEqualToMembers)?.count, 3)
         
+        // Solución revisada
+        
+        housesFiltered = houses.filter { $0.count == 1 }
+        XCTAssertEqual(housesFiltered.count, 1)
+        housesFiltered = localData.houses(filteredBy: { $0.count == 1 })
+        XCTAssertEqual(housesFiltered.count, 1)
     }
     
 }
