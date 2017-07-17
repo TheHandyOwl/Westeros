@@ -36,6 +36,27 @@ class HouseViewController: UIViewController {
         fatalError("init(coder:) has not been impemented")
     }
 
+    // Esta func se crea un poco más abajo
+    func setupUI(){
+        // Añadimos un botón a la barra del navigationController
+        let wiki = UIBarButtonItem(title: "Wiki",
+                                   style: .plain,
+                                   target: self,
+                                   action: #selector(displayWiki))
+        
+        // Añadimos el botón
+        navigationItem.rightBarButtonItem = wiki
+    }
+    
+    @objc func displayWiki(){
+        // Creamos un WikiVC y lo cargamos en el navigation
+        let wikiVC = WikiViewController(model: model)
+        
+        // Lo cargamos en el navigation
+        navigationController?.pushViewController(wikiVC,
+                                                 animated: true)
+    }
+    
     func syncViewWithModel(){
         // model -> view
         houseNameView.text = "House: \(model.name)"
@@ -45,6 +66,8 @@ class HouseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        setupUI()
         
         syncViewWithModel()
     }

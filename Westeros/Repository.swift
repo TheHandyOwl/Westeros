@@ -34,21 +34,30 @@ final class LocalFactory : HouseFactory{
             // Aquí es donde te creas tus casas
             // Sigils
             // ^^^^^^
-            let starkSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Direwolf")
+            let starkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Direwolf")
             let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "Rampant Lion")
             let mormontSigil = Sigil(image: #imageLiteral(resourceName: "mormont.png"), description: "Rampant bear")
             let greyjoySigil = Sigil(image: #imageLiteral(resourceName: "greyjoy.png"), description: "A golden kraken on a black field")
             let targaryenSigil = Sigil(image: #imageLiteral(resourceName: "targaryen.png"), description: "A red three-headed dragon")
             let tyrellSigil = Sigil(image: #imageLiteral(resourceName: "tyrell.png"), description: "A golden rose on a green field")
             
+            // URLs
+            // ^^^^
+            let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+            let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
+            let mormontURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Mormont")!
+            let greyjoykURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Greyjoy")!
+            let targaryenURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Targaryen")!
+            let tyrellURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Tyrell")!
+            
             // Houses
             // ^^^^^^
-            let stark = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!")
-            let lannister = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!")
-            let mormont = House(name: "Mormont", sigil: mormontSigil, words: "Here we stand!")
-            let greyjoy = House(name: "Greyjoy", sigil: greyjoySigil, words: "We Do Not Sow")
-            let targaryen = House(name: "Targaryen", sigil: targaryenSigil, words: "Fire and Blood")
-            let tyrell = House(name: "Tyrell", sigil: tyrellSigil, words: "Growing Strong")
+            let stark = House(name: "Stark", sigil: starkSigil, words: "Winter is coming!", url: starkURL)
+            let lannister = House(name: "Lannister", sigil: lannisterSigil, words: "Hear me roar!", url: lannisterURL)
+            let mormont = House(name: "Mormont", sigil: mormontSigil, words: "Here we stand!", url: mormontURL)
+            let greyjoy = House(name: "Greyjoy", sigil: greyjoySigil, words: "We Do Not Sow", url: greyjoykURL)
+            let targaryen = House(name: "Targaryen", sigil: targaryenSigil, words: "Fire and Blood", url: targaryenURL)
+            let tyrell = House(name: "Tyrell", sigil: tyrellSigil, words: "Growing Strong", url: tyrellURL)
             
             // Characters
             // ^^^^^^^^^^
