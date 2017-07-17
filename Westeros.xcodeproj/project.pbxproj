@@ -25,6 +25,8 @@
 		079D5A331F0C47E30027D8F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079D5A311F0C47E30027D8F5 /* LaunchScreen.storyboard */; };
 		07A568B31F1D4A2A0046E484 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A568B11F1D4A2A0046E484 /* WikiViewController.swift */; };
 		07A568B41F1D4A2A0046E484 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A568B21F1D4A2A0046E484 /* WikiViewController.xib */; };
+		07A568BD1F1D668D0046E484 /* HousesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A568BB1F1D668D0046E484 /* HousesViewController.swift */; };
+		07A568BE1F1D668D0046E484 /* HousesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A568BC1F1D668D0046E484 /* HousesViewController.xib */; };
 		07B89C971F0EF3E0008DE341 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B89C961F0EF3E0008DE341 /* House.swift */; };
 		07B89C991F0EF422008DE341 /* HouseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07B89C981F0EF422008DE341 /* HouseTest.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +64,8 @@
 		079D5A3F1F0C47E40027D8F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07A568B11F1D4A2A0046E484 /* WikiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
 		07A568B21F1D4A2A0046E484 /* WikiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
+		07A568BB1F1D668D0046E484 /* HousesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HousesViewController.swift; sourceTree = "<group>"; };
+		07A568BC1F1D668D0046E484 /* HousesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HousesViewController.xib; sourceTree = "<group>"; };
 		07B89C961F0EF3E0008DE341 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		07B89C981F0EF422008DE341 /* HouseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,6 +95,8 @@
 				0700B4EB1F141A1500975924 /* HouseViewController.xib */,
 				07A568B11F1D4A2A0046E484 /* WikiViewController.swift */,
 				07A568B21F1D4A2A0046E484 /* WikiViewController.xib */,
+				07A568BB1F1D668D0046E484 /* HousesViewController.swift */,
+				07A568BC1F1D668D0046E484 /* HousesViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				078845661F0EC87700F0106B /* lannister.jpg in Resources */,
 				079D5A331F0C47E30027D8F5 /* LaunchScreen.storyboard in Resources */,
 				0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */,
+				07A568BE1F1D668D0046E484 /* HousesViewController.xib in Resources */,
 				0751E7511F1AD5E6001AE9B9 /* greyjoy.png in Resources */,
 				079D5A301F0C47E30027D8F5 /* Assets.xcassets in Resources */,
 				0751E74D1F1AA97B001AE9B9 /* targaryen.png in Resources */,
@@ -284,6 +291,7 @@
 				079D5A291F0C47E30027D8F5 /* AppDelegate.swift in Sources */,
 				07B89C971F0EF3E0008DE341 /* House.swift in Sources */,
 				0788456C1F0ECDA800F0106B /* Person.swift in Sources */,
+				07A568BD1F1D668D0046E484 /* HousesViewController.swift in Sources */,
 				0700B4EC1F141A1500975924 /* HouseViewController.swift in Sources */,
 				073FB2821F155DC400CC2E62 /* UIKitExtensions.swift in Sources */,
 				073FB2861F15623000CC2E62 /* Repository.swift in Sources */,
