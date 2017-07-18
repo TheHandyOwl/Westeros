@@ -74,7 +74,7 @@ class HousesViewController: UITableViewController {
         let house = model[indexPath.row]
         
         // La mostramos
-        let houseVC = HousesViewController(model: [house])
+        let houseVC = HouseViewController(model: house)
         navigationController?.pushViewController(houseVC, animated: true)
     }
 

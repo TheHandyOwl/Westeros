@@ -37,23 +37,37 @@ class HouseViewController: UIViewController {
     }
 
     // Esta func se crea un poco más abajo
+    
     func setupUI(){
         // Añadimos un botón a la barra del navigationController
         let wiki = UIBarButtonItem(title: "Wiki",
                                    style: .plain,
                                    target: self,
                                    action: #selector(displayWiki))
-        
+
+        let members = UIBarButtonItem(title: "Members",
+                                   style: .plain,
+                                   target: self,
+                                   action: #selector(displayMembers))
         // Añadimos el botón
-        navigationItem.rightBarButtonItem = wiki
+        navigationItem.rightBarButtonItems = [members, wiki]
+        //navigationItem.rightBarButtonItem = wiki
     }
-    
     @objc func displayWiki(){
         // Creamos un WikiVC y lo cargamos en el navigation
         let wikiVC = WikiViewController(model: model)
         
         // Lo cargamos en el navigation
         navigationController?.pushViewController(wikiVC,
+                                                 animated: true)
+    }
+
+    @objc func displayMembers(){
+        // Creamos un WikiVC y lo cargamos en el navigation
+        let membersVC = MembersViewController(model: model.sortedMembers())
+        
+        // Lo cargamos en el navigation
+        navigationController?.pushViewController(membersVC,
                                                  animated: true)
     }
     
