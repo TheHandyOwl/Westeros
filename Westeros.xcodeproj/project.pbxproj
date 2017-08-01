@@ -156,7 +156,6 @@
 			children = (
 				079AD8EC1F1EB13100DB5B34 /* Data Sources */,
 				079AD8EB1F1EB11D00DB5B34 /* Delegates */,
-				073FD4B81F1E99EA006290F8 /* ArrayDataSource.swift */,
 				079AD8E41F1EA9B300DB5B34 /* ArrayTableViewController.swift */,
 			);
 			name = Generics;
@@ -174,6 +173,7 @@
 		079AD8EC1F1EB13100DB5B34 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
+				073FD4B81F1E99EA006290F8 /* ArrayDataSource.swift */,
 				079AD8E71F1EAB7600DB5B34 /* DataSources.swift */,
 			);
 			name = "Data Sources";
@@ -200,11 +200,11 @@
 		079D5A271F0C47E30027D8F5 /* Westeros */ = {
 			isa = PBXGroup;
 			children = (
+				079D5A281F0C47E30027D8F5 /* AppDelegate.swift */,
 				073FB2801F155DA300CC2E62 /* Cocoa */,
-				078845681F0EC87E00F0106B /* Resources */,
 				0736A2AD1F1412A400B71D1F /* Controllers */,
 				078845631F0EC25A00F0106B /* Models */,
-				079D5A281F0C47E30027D8F5 /* AppDelegate.swift */,
+				078845681F0EC87E00F0106B /* Resources */,
 				079D5A2F1F0C47E30027D8F5 /* Assets.xcassets */,
 				079D5A311F0C47E30027D8F5 /* LaunchScreen.storyboard */,
 				079D5A341F0C47E30027D8F5 /* Info.plist */,

@@ -8,17 +8,24 @@
 
 import UIKit
 
-class ArrayTableViewController<Element>: UITableViewController {
+class ArrayTableViewController<Element>: UITableViewController{
 
     let dataSource : ArrayDataSource<Element>
+    let delegate : ArrayTableViewDelegate<Element>
     
-    init(dataSource: ArrayDataSource<Element>, title: String, style: UITableViewStyle){
+    init(dataSource: ArrayDataSource<Element>,
+         delegate: ArrayTableViewDelegate<Element>,
+         title: String,
+         style: UITableViewStyle){
         
         self.dataSource = dataSource
+        self.delegate = delegate
         super.init(style: style)
+
         self.title = title
-        
+
         tableView.dataSource = self.dataSource
+        tableView.delegate = self.delegate
         
     }
     
@@ -27,3 +34,13 @@ class ArrayTableViewController<Element>: UITableViewController {
     }
     
 }
+
+
+
+
+
+
+
+
+
+

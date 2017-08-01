@@ -21,7 +21,10 @@ class ArrayDataSourceTests: XCTestCase {
         super.tearDown()
     }
     
+    // Test para la clausura del array
     func testArrayDataSourceCreation(){
+        
+        // Omitimos la variable tableView 
         
         let ds = ArrayDataSource(model: [1,2,3,4]) { (number: Int, tableView: UITableView) -> UITableViewCell in
             

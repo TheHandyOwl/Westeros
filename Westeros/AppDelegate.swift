@@ -21,12 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
         
-        // Creamos uno modelos
+        // Creamos los modelos
         let houses = Repository.local.houses
+        let mainDelegate = Delegates.housesDelegate(model: houses)
         
         // Creamos los controladores
         let dataSource = DataSources.houseDataSource(model: houses)
-        let housesVC = ArrayTableViewController(dataSource: dataSource, title: "Westeros", style: .plain)
+        let housesVC = ArrayTableViewController(dataSource: dataSource, delegate: mainDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
 
         // Asignamos el RootVC
         window?.rootViewController = housesVC
