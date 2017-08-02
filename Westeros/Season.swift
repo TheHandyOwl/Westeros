@@ -8,5 +8,20 @@
 
 import Foundation
 
-
-final class Season{}
+final class Season{
+    
+    let name : String
+    let releaseDate : Date
+    
+    init(name: String, releaseDateString2Date: String) {
+        
+        self.name = name
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        
+        self.releaseDate = formatter.date(from: releaseDateString2Date)!
+        
+    }
+    
+}
