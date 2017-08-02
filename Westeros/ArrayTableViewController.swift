@@ -11,21 +11,24 @@ import UIKit
 class ArrayTableViewController<Element>: UITableViewController{
 
     let dataSource : ArrayDataSource<Element>
-    let delegate : ArrayTableViewDelegate<Element>
+    let arrayDelegate : BaseViewControllerDelegate<Element>?
     
     init(dataSource: ArrayDataSource<Element>,
-         delegate: ArrayTableViewDelegate<Element>,
-         title: String,
-         style: UITableViewStyle){
+           delegate: BaseViewControllerDelegate<Element>? = nil,
+              title: String,
+              style: UITableViewStyle){
         
         self.dataSource = dataSource
-        self.delegate = delegate
+        self.arrayDelegate = delegate
         super.init(style: style)
-
+        self.tableView.dataSource = self.dataSource
+        
+        self.arrayDelegate?.viewController = self
+        self.arrayDelegate?.source = dataSource
+        
+        self.tableView.delegate = self.arrayDelegate as? UITableViewDelegate
+        
         self.title = title
-
-        tableView.dataSource = self.dataSource
-        tableView.delegate = self.delegate
         
     }
     
