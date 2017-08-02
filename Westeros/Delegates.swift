@@ -8,38 +8,20 @@
 
 import UIKit
 
-final class Delegates{
-
-    static func housesDelegate(model: [House]) -> ArrayTableViewDelegate<House>{
-        
-        // Qué va aqui???
-        
-        return ArrayTableViewDelegate(model: model, navMaker: { (house: House) in
-            
-            let houseVC = HouseViewController(model: house)
-            let mainController = UIApplication.mainViewController()
-            
-            mainController?.navigationController?.pushViewController(houseVC, animated: true)
-            
-        })
-        
-    }
-
+class BaseViewControllerDelegate<Element>: NSObject{
+    var source : ArrayDataSource<Element>?
+    var viewController : UIViewController?
 }
 
-extension UIApplication {
-    class func mainViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
-        if let nav = base as? UINavigationController {
-            return mainViewController(base: nav.visibleViewController)
+final class HousesDelegate: BaseViewControllerDelegate<House>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let house = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+ 
+            let vc = HouseViewController(model: house)
+            nav.pushViewController(vc, animated: true)
         }
-        if let tab = base as? UITabBarController {
-            if let selected = tab.selectedViewController {
-                return mainViewController(base: selected)
-            }
-        }
-        if let presented = base?.presentedViewController {
-            return mainViewController(base: presented)
-        }
-        return base
     }
+    
 }
