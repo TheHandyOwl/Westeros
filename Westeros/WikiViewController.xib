@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,21 +18,45 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-PG-oLf">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </webView>
-                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-hA-M47">
-                    <rect key="frame" x="169" y="315" width="37" height="37"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                </activityIndicatorView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LUf-jC-Nk7" userLabel="browserView">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <subviews>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0b5-PG-oLf">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </webView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0b5-PG-oLf" firstAttribute="centerY" secondItem="LUf-jC-Nk7" secondAttribute="centerY" id="J3G-vp-fKK"/>
+                        <constraint firstItem="0b5-PG-oLf" firstAttribute="centerX" secondItem="LUf-jC-Nk7" secondAttribute="centerX" id="gMS-H7-DmU"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="biX-HB-bUh" userLabel="activityView">
+                    <rect key="frame" x="141.5" y="221" width="37" height="37"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-hA-M47">
+                            <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerX" secondItem="biX-HB-bUh" secondAttribute="centerX" id="PKB-8B-MCn"/>
+                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerY" secondItem="biX-HB-bUh" secondAttribute="centerY" id="iVW-QL-Kb3"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="biX-HB-bUh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AzA-z3-TVi"/>
+                <constraint firstItem="LUf-jC-Nk7" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z2f-gK-HMZ"/>
+                <constraint firstItem="LUf-jC-Nk7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dt4-Md-KuH"/>
+                <constraint firstItem="LUf-jC-Nk7" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="mvu-aE-kAt"/>
+                <constraint firstItem="biX-HB-bUh" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="s1a-jg-UhT"/>
+                <constraint firstItem="LUf-jC-Nk7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wBh-gM-6a2"/>
+            </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>

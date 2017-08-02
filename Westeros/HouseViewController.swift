@@ -49,16 +49,18 @@ class HouseViewController: UIViewController {
                                    style: .plain,
                                    target: self,
                                    action: #selector(displayMembers))
+        
         // Añadimos el botón
+        // navigationItem.rightBarButtonItem = wiki
         navigationItem.rightBarButtonItems = [members, wiki]
-        //navigationItem.rightBarButtonItem = wiki
     }
+    
     @objc func displayWiki(){
         // Creamos un WikiVC y lo cargamos en el navigation
         let wikiVC = WikiViewController(model: model)
         
         // Lo cargamos en el navigation
-        super.navigationController?.pushViewController(wikiVC,
+        navigationController?.pushViewController(wikiVC,
                                                  animated: true)
     }
 
@@ -100,5 +102,6 @@ class HouseViewController: UIViewController {
             NSForegroundColorAttributeName: UIColor.lightGray
         ]
         appearance.setTitleTextAttributes(attributesNormal, for: .normal)
+
     }
 }
