@@ -58,7 +58,7 @@ class HouseViewController: UIViewController {
         let wikiVC = WikiViewController(model: model)
         
         // Lo cargamos en el navigation
-        navigationController?.pushViewController(wikiVC,
+        super.navigationController?.pushViewController(wikiVC,
                                                  animated: true)
     }
 
