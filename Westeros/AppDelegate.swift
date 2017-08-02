@@ -16,20 +16,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // Crear Window
+        // Model
+        let houses = Repository.local.houses
+        
+        // Controllers
+        let dataSource = DataSources.houseDataSource(model: houses)
+        let housesVC = ArrayTableViewController(dataSource: dataSource,
+                                                  delegate: HousesDelegate(),
+                                                     title: "Westeros",
+                                                     style: .plain).wrappedInNavigation()
+
+        // Window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
-        
-        // Creamos los modelos
-        let houses = Repository.local.houses
-        let mainDelegate = Delegates.housesDelegate(model: houses)
-        
-        // Creamos los controladores
-        let dataSource = DataSources.houseDataSource(model: houses)
-        let housesVC = ArrayTableViewController(dataSource: dataSource, delegate: mainDelegate, title: "Westeros", style: .plain).wrappedInNavigation()
-
-        // Asignamos el RootVC
         window?.rootViewController = housesVC
 
         return true
