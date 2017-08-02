@@ -21,21 +21,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Controllers
         let dataSource = DataSources.houseDataSource(model: houses)
+        /*
+        let housesVC = ArrayTableViewController(dataSource: dataSource,
+                                                 delegate: HousesDelegate(),
+                                                 title: "Houses",
+                                                 style: .plain).wrappedInNavigation()
+        */
+        /**/
         let housesVC1 = ArrayTableViewController(dataSource: dataSource,
                                                  delegate: HousesDelegate(),
-                                                 title: "Westeros",
+                                                 title: "Houses",
                                                  style: .plain).wrappedInNavigation()
         let housesVC2 = ArrayTableViewController(dataSource: dataSource,
                                                  delegate: HousesDelegate(),
-                                                 title: "Westeros",
+                                                 title: "Seasons",
                                                  style: .plain).wrappedInNavigation()
         let tabVC = UITabBarController()
         tabVC.viewControllers = [housesVC1, housesVC2]
-
+        /**/
+        
         // Window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
+        //window?.rootViewController = housesVC
         window?.rootViewController = tabVC.wrappedInNavigation()
 
         return true
