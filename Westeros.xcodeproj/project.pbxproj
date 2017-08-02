@@ -106,7 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				079AD8E61F1EAB5A00DB5B34 /* Generics */,
-				079AD8E41F1EA9B300DB5B34 /* ArrayTableViewController.swift */,
 				0700B4EA1F141A1500975924 /* HouseViewController.swift */,
 				0700B4EB1F141A1500975924 /* HouseViewController.xib */,
 				07A568B11F1D4A2A0046E484 /* WikiViewController.swift */,
@@ -153,6 +152,7 @@
 		079AD8E61F1EAB5A00DB5B34 /* Generics */ = {
 			isa = PBXGroup;
 			children = (
+				079AD8E41F1EA9B300DB5B34 /* ArrayTableViewController.swift */,
 				079AD8EC1F1EB13100DB5B34 /* Data Sources */,
 				079AD8EB1F1EB11D00DB5B34 /* Delegates */,
 			);
