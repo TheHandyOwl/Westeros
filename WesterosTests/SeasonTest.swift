@@ -29,12 +29,12 @@ class SeasonTest: XCTestCase {
         season1 = Season(name: "Season 1", releaseDateString2Date: "2011-04-17")
         season2 = Season(name: "Season 2", releaseDateString2Date: "2012-04-01")
         
-        episode_1_1 = Episode(title: "Winter Is Coming", broadcastDateString2Date: "2011-04-17")
-        episode_1_2 = Episode(title: "The Kingsroad", broadcastDateString2Date: "2011-04-18")
-        episode_1_3 = Episode(title: "Lord Snow", broadcastDateString2Date: "2011-04-19")
+        episode_1_1 = Episode(title: "Winter Is Coming", broadcastDateString2Date: "2011-04-17", episodeFromSeason: season1)
+        episode_1_2 = Episode(title: "The Kingsroad", broadcastDateString2Date: "2011-04-18", episodeFromSeason: season1)
+        episode_1_3 = Episode(title: "Lord Snow", broadcastDateString2Date: "2011-04-19", episodeFromSeason: season1)
         
-        episode_2_1 = Episode(title: "The North Remembers", broadcastDateString2Date: "2012-04-01")
-        episode_2_2 = Episode(title: "The Night Lands", broadcastDateString2Date: "2012-04-02")
+        episode_2_1 = Episode(title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
+        episode_2_2 = Episode(title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
 
     }
     

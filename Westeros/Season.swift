@@ -15,7 +15,8 @@ final class Season{
     let name : String
     let releaseDate : Date
     
-    var _episodes : Episodes
+    // OJO: con el toolchain y el private
+    private var _episodes : Episodes
     
     init(name: String, releaseDateString2Date: String) {
         
