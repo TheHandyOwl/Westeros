@@ -41,6 +41,10 @@ extension Season{
     }
 
     func add(episode: Episode){
+        
+        guard (self.name == episode.episodeFromSeason?.name) else{
+            return
+        }
         _episodes.insert(episode)
     }
     

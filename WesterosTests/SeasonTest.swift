@@ -63,6 +63,12 @@ class SeasonTest: XCTestCase {
         
         season2.add(episodes: episode_2_1, episode_2_2)
         XCTAssertEqual(season2.count, 2)
+        
+        // Este no debería funcionar
+        XCTAssertEqual(season1.count, 3)
+        season1.add(episode: episode_2_1)
+        XCTAssertEqual(season1.count, 3)
+        
     }
     
 }
