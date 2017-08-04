@@ -1,15 +1,16 @@
 //
-//  SeasonTest.swift
+//  EpisodeTest.swift
 //  Westeros
 //
-//  Created by Carlos on 3/8/17.
+//  Created by Carlos on 4/8/17.
 //  Copyright © 2017 THO. All rights reserved.
 //
 
 import XCTest
 @testable import Westeros
 
-class SeasonTest: XCTestCase {
+class EpisodeTest: XCTestCase {
+    
     
     // Seasons
     var season1 : Season!
@@ -43,34 +44,9 @@ class SeasonTest: XCTestCase {
         super.tearDown()
     }
     
-    func testSeasonExistence() {
-        XCTAssertNotNil(season1)
-    }
     
-    func testAddEpisodes() {
-        
-        XCTAssertEqual(season1.count, 0)
-        XCTAssertEqual(season2.count, 0)
-        
-        // Añade 1
-        season1.add(episode: episode_1_1)
-        XCTAssertEqual(season1.count, 1)
-        
-        season1.add(episode: episode_1_2)
-        XCTAssertEqual(season1.count, 2)
-        
-        season1.add(episode: episode_1_3)
-        XCTAssertEqual(season1.count, 3)
-        
-        // Añade muchos
-        season2.add(episodes: episode_2_1, episode_2_2)
-        XCTAssertEqual(season2.count, 2)
-        
-        // Este no debería añadir el episodio
-        XCTAssertEqual(season1.count, 3)
-        season1.add(episode: episode_2_1)
-        XCTAssertEqual(season1.count, 3)
-        
+    func testEpisodeExistence() {
+        XCTAssertNotNil(episode_1_1)
     }
     
 }

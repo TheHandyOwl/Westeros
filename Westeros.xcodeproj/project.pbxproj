@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0700B4EC1F141A1500975924 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700B4EA1F141A1500975924 /* HouseViewController.swift */; };
 		0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0700B4EB1F141A1500975924 /* HouseViewController.xib */; };
+		07337ED11F3483F60047E99A /* EpisodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07337ED01F3483F60047E99A /* EpisodeTest.swift */; };
 		073F359E1F3288E000E8C70A /* SeasonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F359D1F3288E000E8C70A /* SeasonTest.swift */; };
 		073F35A01F3289F000E8C70A /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073F359F1F3289F000E8C70A /* Season.swift */; };
 		073FB2821F155DC400CC2E62 /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */; };
@@ -54,6 +55,7 @@
 /* Begin PBXFileReference section */
 		0700B4EA1F141A1500975924 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		0700B4EB1F141A1500975924 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		07337ED01F3483F60047E99A /* EpisodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTest.swift; sourceTree = "<group>"; };
 		073F359D1F3288E000E8C70A /* SeasonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonTest.swift; sourceTree = "<group>"; };
 		073F359F1F3289F000E8C70A /* Season.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		073FB2811F155DC400CC2E62 /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				078845691F0ECABB00F0106B /* PersonTest.swift */,
 				073FB2831F15608500CC2E62 /* RepositoryTests.swift */,
 				073F359D1F3288E000E8C70A /* SeasonTest.swift */,
+				07337ED01F3483F60047E99A /* EpisodeTest.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07B89C991F0EF422008DE341 /* HouseTest.swift in Sources */,
+				07337ED11F3483F60047E99A /* EpisodeTest.swift in Sources */,
 				0788456A1F0ECABB00F0106B /* PersonTest.swift in Sources */,
 				073FD4BB1F1E9EF6006290F8 /* ArrayDataSourceTests.swift in Sources */,
 				073FB2841F15608500CC2E62 /* RepositoryTests.swift in Sources */,
