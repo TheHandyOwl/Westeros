@@ -55,6 +55,10 @@ extension Season{
             add(episode: episode)
         }
     }
+    
+    func  sortedEpisodes() -> [Episode]{
+        return _episodes.sorted()
+    }
 
 }
 

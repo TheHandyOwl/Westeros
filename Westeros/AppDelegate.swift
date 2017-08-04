@@ -17,17 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Model
-        let houses = Repository.local.houses
+        // let houses = Repository.local.houses
+        let season = Season(numberOf: 1, name: "Season 1", releaseDateString2Date: "2011-04-17")
+        let episode_1 = Episode(numberOf: 1, title: "Winter Is Coming", broadcastDateString2Date: "2011-04-17", episodeFromSeason: season)
+        let episode_2 = Episode(numberOf: 2, title: "The Kingsroad", broadcastDateString2Date: "2011-04-18", episodeFromSeason: season)
+        let episode_3 = Episode(numberOf: 3, title: "Lord Snow", broadcastDateString2Date: "2011-04-19", episodeFromSeason: season)
+        season.add(episodes: episode_1, episode_2, episode_3)
         
         // Controllers
+        /*
         let dataSource = DataSources.houseDataSource(model: houses)
+        */
         /*
         let housesVC = ArrayTableViewController(dataSource: dataSource,
                                                  delegate: HousesDelegate(),
                                                  title: "Houses",
                                                  style: .plain).wrappedInNavigation()
         */
-        /**/
+        /*
         let housesVC1 = ArrayTableViewController(dataSource: dataSource,
                                                  delegate: HousesDelegate(),
                                                  title: "Houses",
@@ -38,14 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                  style: .plain).wrappedInNavigation()
         let tabVC = UITabBarController()
         tabVC.viewControllers = [housesVC1, housesVC2]
-        /**/
+        */
         
         // Window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
+        window?.rootViewController = SeasonViewController(model: season)
         //window?.rootViewController = housesVC
-        window?.rootViewController = tabVC
+        //window?.rootViewController = tabVC
         //window?.rootViewController = tabVC.wrappedInNavigation()
         
         return true
