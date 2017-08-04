@@ -42,7 +42,7 @@ extension Season{
 
     func add(episode: Episode){
         
-        guard (self.name == episode.episodeFromSeason?.name) else{
+        guard (self.name.uppercased() == episode.episodeFromSeason?.name.uppercased()) else{
             return
         }
         _episodes.insert(episode)
@@ -57,13 +57,19 @@ extension Season{
 }
 
 /*
+extension Season{
+    var proxySeasonUppercased: String{
+        return name.uppercased()
+    }
+}
+
 extension Season : Equatable{
     // public static func ==(lhs: Self, rhs: Self) -> Bool
     static func ==(lhs: Season, rhs: Season) -> Bool {
         return lhs.name == rhs.name
     }
 }
- */
+*/
 
 
 

@@ -35,7 +35,6 @@ class SeasonTest: XCTestCase {
         
         episode_2_1 = Episode(title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
         episode_2_2 = Episode(title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
-
     }
     
     override func tearDown() {
@@ -52,6 +51,7 @@ class SeasonTest: XCTestCase {
         XCTAssertEqual(season1.count, 0)
         XCTAssertEqual(season2.count, 0)
         
+        // Añade 1
         season1.add(episode: episode_1_1)
         XCTAssertEqual(season1.count, 1)
         
@@ -61,10 +61,11 @@ class SeasonTest: XCTestCase {
         season1.add(episode: episode_1_3)
         XCTAssertEqual(season1.count, 3)
         
+        // Añade muchos
         season2.add(episodes: episode_2_1, episode_2_2)
         XCTAssertEqual(season2.count, 2)
         
-        // Este no debería funcionar
+        // Este no debería añadir el episodio
         XCTAssertEqual(season1.count, 3)
         season1.add(episode: episode_2_1)
         XCTAssertEqual(season1.count, 3)
