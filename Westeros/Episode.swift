@@ -82,6 +82,16 @@ extension Episode : Equatable {
     }
 }
 
+extension Episode : CustomStringConvertible {
+    // public var description: String { get }
+    var description: String {
+        if let season = episodeFromSeason{
+            return "<\(season.numberOf)x\(numberOf)> \(title)"
+        } else {
+            return "<NAx\(numberOf)> \(title)"
+        }
+    }
+}
 
 
 

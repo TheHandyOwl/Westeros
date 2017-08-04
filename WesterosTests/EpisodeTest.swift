@@ -69,4 +69,20 @@ class EpisodeTest: XCTestCase {
         
     }
     
+    func testEpisodeDescription(){
+        let episodeWithOptional = Episode(numberOf: 101, title: "Winter Is Me", broadcastDateString2Date: "2017-08-04", episodeFromSeason: season1)
+        let episodeWithoutOptional = Episode(numberOf: 102, title: "Winter Is Me", broadcastDateString2Date: "2017-08-04")
+        XCTAssertEqual(episodeWithOptional.description, "<1x101> Winter Is Me")
+        XCTAssertEqual(episodeWithoutOptional.description, "<NAx102> Winter Is Me")
+    }
+    
 }
+
+
+
+
+
+
+
+
+

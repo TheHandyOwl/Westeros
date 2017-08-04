@@ -58,21 +58,59 @@ extension Season{
 
 }
 
-/*
-extension Season{
+extension Season {
     var proxySeasonUppercased: String{
         return name.uppercased()
+    }
+}
+
+extension Season : Comparable {
+    /*
+     static func <(lhs: Self, rhs: Self) -> Bool
+     static func <=(lhs: Self, rhs: Self) -> Bool
+     static func >=(lhs: Self, rhs: Self) -> Bool
+     static func >(lhs: Self, rhs: Self) -> Bool
+     */
+    static func <(lhs: Season, rhs: Season) -> Bool {
+        return lhs.numberOf < rhs.numberOf
+    }
+    
+    static func <=(lhs: Season, rhs: Season) -> Bool {
+        return lhs.numberOf <= rhs.numberOf
+    }
+    
+    static func >=(lhs: Season, rhs: Season) -> Bool {
+        return lhs.numberOf >= rhs.numberOf
+    }
+    
+    static func >(lhs: Season, rhs: Season) -> Bool {
+        return lhs.numberOf > rhs.numberOf
+    }
+    
+}
+
+extension Season : Hashable {
+    // public var hashValue: Int { get }
+    var hashValue: Int{
+        get {
+            return proxySeasonUppercased.hashValue
+        }
     }
 }
 
 extension Season : Equatable{
     // public static func ==(lhs: Self, rhs: Self) -> Bool
     static func ==(lhs: Season, rhs: Season) -> Bool {
-        return lhs.name == rhs.name
+        return lhs.numberOf == rhs.numberOf
     }
 }
-*/
 
+extension Season : CustomStringConvertible {
+    // public var description: String { get }
+    var description: String {
+        return "<T\(numberOf)> \(name)"
+    }
+}
 
 
 

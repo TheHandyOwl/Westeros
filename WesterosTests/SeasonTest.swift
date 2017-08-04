@@ -36,6 +36,7 @@ class SeasonTest: XCTestCase {
         
         episode_2_1 = Episode(numberOf: 1, title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
         episode_2_2 = Episode(numberOf: 2, title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
+        
     }
     
     override func tearDown() {
@@ -71,6 +72,30 @@ class SeasonTest: XCTestCase {
         season1.add(episode: episode_2_1)
         XCTAssertEqual(season1.count, 3)
         
+    }
+    
+    func testSeasonEquality(){
+        
+        //Comparación
+        XCTAssertLessThan(season1, season2)
+        XCTAssertLessThanOrEqual(season1, season1)
+        XCTAssertGreaterThan(season2, season1)
+        XCTAssertGreaterThanOrEqual(season1, season1)
+        
+        //Identidad
+        XCTAssertEqual(season1, season1)
+        
+        // Igualdad
+        let sameSeason = season1
+        XCTAssertEqual(sameSeason, season1)
+        
+        // Desigualdad
+        XCTAssertNotEqual(season1, season2)
+        
+    }
+    
+    func testSeasonDescription(){
+        XCTAssertEqual(season1.description, "<T1> Season 1")
     }
     
 }
