@@ -33,11 +33,17 @@ final class Episode{
     
 }
 
+extension Episode {
+    var proxyTitle: String{
+        return title.uppercased()
+    }
+}
+
 extension Episode : Hashable {
     // public var hashValue: Int { get }
     var hashValue: Int{
         get {
-            return title.hashValue
+            return proxyTitle.hashValue
         }
     }
 }
@@ -45,7 +51,7 @@ extension Episode : Hashable {
 extension Episode : Equatable {
     // public static func ==(lhs: Self, rhs: Self) -> Bool
     static func ==(lhs: Episode, rhs: Episode) -> Bool {
-            return lhs.title == rhs.title
+            return lhs.proxyTitle == rhs.proxyTitle
     }
 }
 
