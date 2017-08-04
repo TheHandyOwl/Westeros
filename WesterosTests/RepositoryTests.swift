@@ -71,7 +71,6 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(housesFiltered.count, 1)
         
         housesFiltered = houses.filter {$0.count >= 4}
-        print(housesFiltered)
         XCTAssertEqual(housesFiltered.count, 3)
         */
         
