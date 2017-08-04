@@ -20,10 +20,8 @@ final class Episode{
         self.numberOf = numberOf
         self.title = title
         
-        // No podemos usar las extensiones hasta que no hayamos inicializado
-        let tempDate = DateFormatter()
-        tempDate.dateFormat = "yyyy-MM-dd"
-        self.broadcastDate = tempDate.date(from: broadcastDateFromString)!
+        // Formato personalizado en UIKitExtensions
+        self.broadcastDate = broadcastDateFromString.formatString2DateYYYYMMdd()
         
         self.episodeFromSeason = episodeFromSeason
         
