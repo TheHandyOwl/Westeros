@@ -27,15 +27,15 @@ class SeasonTest: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
-        season1 = Season(name: "Season 1", releaseDateString2Date: "2011-04-17")
-        season2 = Season(name: "Season 2", releaseDateString2Date: "2012-04-01")
+        season1 = Season(numberOf: 1, name: "Season 1", releaseDateString2Date: "2011-04-17")
+        season2 = Season(numberOf: 2, name: "Season 2", releaseDateString2Date: "2012-04-01")
         
-        episode_1_1 = Episode(title: "Winter Is Coming", broadcastDateString2Date: "2011-04-17", episodeFromSeason: season1)
-        episode_1_2 = Episode(title: "The Kingsroad", broadcastDateString2Date: "2011-04-18", episodeFromSeason: season1)
-        episode_1_3 = Episode(title: "Lord Snow", broadcastDateString2Date: "2011-04-19", episodeFromSeason: season1)
+        episode_1_1 = Episode(numberOf: 1, title: "Winter Is Coming", broadcastDateString2Date: "2011-04-17", episodeFromSeason: season1)
+        episode_1_2 = Episode(numberOf: 2, title: "The Kingsroad", broadcastDateString2Date: "2011-04-18", episodeFromSeason: season1)
+        episode_1_3 = Episode(numberOf: 3, title: "Lord Snow", broadcastDateString2Date: "2011-04-19", episodeFromSeason: season1)
         
-        episode_2_1 = Episode(title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
-        episode_2_2 = Episode(title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
+        episode_2_1 = Episode(numberOf: 1, title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
+        episode_2_2 = Episode(numberOf: 2, title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
     }
     
     override func tearDown() {
