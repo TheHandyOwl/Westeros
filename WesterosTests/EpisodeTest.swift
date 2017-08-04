@@ -1,15 +1,16 @@
 //
-//  SeasonTest.swift
+//  EpisodeTest.swift
 //  Westeros
 //
-//  Created by Carlos on 3/8/17.
+//  Created by Carlos on 4/8/17.
 //  Copyright © 2017 THO. All rights reserved.
 //
 
 import XCTest
 @testable import Westeros
 
-class SeasonTest: XCTestCase {
+class EpisodeTest: XCTestCase {
+    
     
     // Seasons
     var season1 : Season!
@@ -36,7 +37,6 @@ class SeasonTest: XCTestCase {
         
         episode_2_1 = Episode(numberOf: 1, title: "The North Remembers", broadcastDateString2Date: "2012-04-01", episodeFromSeason: season2)
         episode_2_2 = Episode(numberOf: 2, title: "The Night Lands", broadcastDateString2Date: "2012-04-02", episodeFromSeason: season2)
-        
     }
     
     override func tearDown() {
@@ -44,58 +44,45 @@ class SeasonTest: XCTestCase {
         super.tearDown()
     }
     
-    func testSeasonExistence() {
-        XCTAssertNotNil(season1)
+    
+    func testEpisodeExistence() {
+        XCTAssertNotNil(episode_1_1)
     }
     
-    func testAddEpisodes() {
-        
-        XCTAssertEqual(season1.count, 0)
-        XCTAssertEqual(season2.count, 0)
-        
-        // Añade 1
-        season1.add(episode: episode_1_1)
-        XCTAssertEqual(season1.count, 1)
-        
-        season1.add(episode: episode_1_2)
-        XCTAssertEqual(season1.count, 2)
-        
-        season1.add(episode: episode_1_3)
-        XCTAssertEqual(season1.count, 3)
-        
-        // Añade muchos
-        season2.add(episodes: episode_2_1, episode_2_2)
-        XCTAssertEqual(season2.count, 2)
-        
-        // Este no debería añadir el episodio
-        XCTAssertEqual(season1.count, 3)
-        season1.add(episode: episode_2_1)
-        XCTAssertEqual(season1.count, 3)
-        
-    }
-    
-    func testSeasonEquality(){
+    func testEpisodeEquality(){
         
         //Comparación
-        XCTAssertLessThan(season1, season2)
-        XCTAssertLessThanOrEqual(season1, season1)
-        XCTAssertGreaterThan(season2, season1)
-        XCTAssertGreaterThanOrEqual(season1, season1)
-        
+        XCTAssertLessThan(episode_1_1, episode_1_2)
+        XCTAssertLessThanOrEqual(episode_1_1, episode_1_1)
+        XCTAssertGreaterThan(episode_1_2, episode_1_1)
+        XCTAssertGreaterThanOrEqual(episode_1_1, episode_1_1)
+    
         //Identidad
-        XCTAssertEqual(season1, season1)
+        XCTAssertEqual(episode_1_1, episode_1_1)
         
         // Igualdad
-        let sameSeason = season1
-        XCTAssertEqual(sameSeason, season1)
+        let sameEpisode = episode_1_1
+        XCTAssertEqual(sameEpisode, episode_1_1)
         
         // Desigualdad
-        XCTAssertNotEqual(season1, season2)
+        XCTAssertNotEqual(episode_1_1, episode_1_2)
         
     }
     
-    func testSeasonDescription(){
-        XCTAssertEqual(season1.description, "<T1> Season 1")
+    func testEpisodeDescription(){
+        let episodeWithOptional = Episode(numberOf: 101, title: "Winter Is Me", broadcastDateString2Date: "2017-08-04", episodeFromSeason: season1)
+        let episodeWithoutOptional = Episode(numberOf: 102, title: "Winter Is Me", broadcastDateString2Date: "2017-08-04")
+        XCTAssertEqual(episodeWithOptional.description, "<1x101> Winter Is Me")
+        XCTAssertEqual(episodeWithoutOptional.description, "<NAx102> Winter Is Me")
     }
     
 }
+
+
+
+
+
+
+
+
+
