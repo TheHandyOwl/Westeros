@@ -45,8 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
         //window?.rootViewController = housesVC
-        window?.rootViewController = tabVC.wrappedInNavigation()
-
+        window?.rootViewController = tabVC
+        //window?.rootViewController = tabVC.wrappedInNavigation()
+        
         return true
     }
     
