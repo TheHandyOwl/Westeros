@@ -12,18 +12,25 @@ final class Episode{
     
     let title : String
     let broadcastDate : Date
+    weak var episodeFromSeason : Season?
     
-    init(title: String, broadcastDateString2Date: String) {
+    init(title: String, broadcastDateString2Date: String, episodeFromSeason: Season?) {
         
         self.title = title
         
         // No podemos usar las extensiones hasta que no hayamos inicializado
         let tempDate = DateFormatter()
         tempDate.dateFormat = "yyyy-MM-dd"
-        
         self.broadcastDate = tempDate.date(from: broadcastDateString2Date)!
         
+        self.episodeFromSeason = episodeFromSeason
+        
     }
+    
+    convenience init (title: String, broadcastDateString2Date: String) {
+        self.init(title: title, broadcastDateString2Date: broadcastDateString2Date, episodeFromSeason: nil)
+    }
+    
 }
 
 extension Episode : Hashable {

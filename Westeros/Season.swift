@@ -15,7 +15,8 @@ final class Season{
     let name : String
     let releaseDate : Date
     
-    var _episodes : Episodes
+    // OJO: con el toolchain y el private
+    private var _episodes : Episodes
     
     init(name: String, releaseDateString2Date: String) {
         
@@ -40,6 +41,10 @@ extension Season{
     }
 
     func add(episode: Episode){
+        
+        guard (self.name.uppercased() == episode.episodeFromSeason?.name.uppercased()) else{
+            return
+        }
         _episodes.insert(episode)
     }
     
@@ -52,13 +57,19 @@ extension Season{
 }
 
 /*
+extension Season{
+    var proxySeasonUppercased: String{
+        return name.uppercased()
+    }
+}
+
 extension Season : Equatable{
     // public static func ==(lhs: Self, rhs: Self) -> Bool
     static func ==(lhs: Season, rhs: Season) -> Bool {
         return lhs.name == rhs.name
     }
 }
- */
+*/
 
 
 
