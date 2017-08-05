@@ -50,12 +50,13 @@ final class DataSources{
             let cellID = "Season"
             var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
             if cell == nil{
-                cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
+                cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
             }
             
+            
+            cell?.imageView?.image = season.numberImage
             cell?.textLabel?.text = season.description
-            //cell?.detailTextLabel?.text = "\(season.count) episode(s)"
-            cell?.detailTextLabel?.text = "33 episodes"
+            cell?.detailTextLabel?.text = "\(season.count) episode(s)"
             
             return cell!
             

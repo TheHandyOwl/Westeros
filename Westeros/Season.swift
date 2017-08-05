@@ -6,15 +6,31 @@
 //  Copyright © 2017 THO. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 typealias Episodes = Set<Episode>
 
 final class Season{
     
     let numberOf : Int
+    let numberImage: UIImage
     let name : String
     let releaseDate : Date
+    
+    // Diccionario con imágenes de números
+    // Para mostrar la temporada
+    let numberImageDictionary: [Int : UIImage] = [
+        0: #imageLiteral(resourceName: "metal-number-0.png"),
+        1: #imageLiteral(resourceName: "metal-number-1.png"),
+        2: #imageLiteral(resourceName: "metal-number-2.png"),
+        3: #imageLiteral(resourceName: "metal-number-3.png"),
+        4: #imageLiteral(resourceName: "metal-number-4.png"),
+        5: #imageLiteral(resourceName: "metal-number-5.png"),
+        6: #imageLiteral(resourceName: "metal-number-6.png"),
+        7: #imageLiteral(resourceName: "metal-number-7.png"),
+        8: #imageLiteral(resourceName: "metal-number-8.png"),
+        9: #imageLiteral(resourceName: "metal-number-9.png")
+    ]
     
     // OJO: con el toolchain y el private
     private var _episodes : Episodes
@@ -22,6 +38,7 @@ final class Season{
     init(numberOf: Int, name: String, releaseDateFromString: String) {
         
         self.numberOf = numberOf
+        self.numberImage = numberImageDictionary[numberOf]!
         self.name = name
         
         // Formato personalizado en UIKitExtensions

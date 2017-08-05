@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		0700B4EC1F141A1500975924 /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0700B4EA1F141A1500975924 /* HouseViewController.swift */; };
 		0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0700B4EB1F141A1500975924 /* HouseViewController.xib */; };
+		073213901F35DD0900399A4B /* metal-number-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 073213851F35DD0900399A4B /* metal-number-0.png */; };
+		073213911F35DD0900399A4B /* metal-number-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 073213861F35DD0900399A4B /* metal-number-1.png */; };
+		073213921F35DD0900399A4B /* metal-number-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 073213871F35DD0900399A4B /* metal-number-2.png */; };
+		073213931F35DD0900399A4B /* metal-number-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 073213881F35DD0900399A4B /* metal-number-3.png */; };
+		073213941F35DD0900399A4B /* metal-number-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 073213891F35DD0900399A4B /* metal-number-4.png */; };
+		073213951F35DD0900399A4B /* metal-number-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732138A1F35DD0900399A4B /* metal-number-5.png */; };
+		073213961F35DD0900399A4B /* metal-number-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732138B1F35DD0900399A4B /* metal-number-6.png */; };
+		073213971F35DD0900399A4B /* metal-number-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732138C1F35DD0900399A4B /* metal-number-7.png */; };
+		073213981F35DD0900399A4B /* metal-number-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732138D1F35DD0900399A4B /* metal-number-8.png */; };
+		073213991F35DD0900399A4B /* metal-number-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 0732138E1F35DD0900399A4B /* metal-number-9.png */; };
 		07337ED11F3483F60047E99A /* EpisodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07337ED01F3483F60047E99A /* EpisodeTest.swift */; };
 		07337ED41F34AF900047E99A /* SeasonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07337ED21F34AF900047E99A /* SeasonViewController.swift */; };
 		07337ED51F34AF900047E99A /* SeasonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07337ED31F34AF900047E99A /* SeasonViewController.xib */; };
@@ -57,6 +67,16 @@
 /* Begin PBXFileReference section */
 		0700B4EA1F141A1500975924 /* HouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
 		0700B4EB1F141A1500975924 /* HouseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		073213851F35DD0900399A4B /* metal-number-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-0.png"; sourceTree = "<group>"; };
+		073213861F35DD0900399A4B /* metal-number-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-1.png"; sourceTree = "<group>"; };
+		073213871F35DD0900399A4B /* metal-number-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-2.png"; sourceTree = "<group>"; };
+		073213881F35DD0900399A4B /* metal-number-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-3.png"; sourceTree = "<group>"; };
+		073213891F35DD0900399A4B /* metal-number-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-4.png"; sourceTree = "<group>"; };
+		0732138A1F35DD0900399A4B /* metal-number-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-5.png"; sourceTree = "<group>"; };
+		0732138B1F35DD0900399A4B /* metal-number-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-6.png"; sourceTree = "<group>"; };
+		0732138C1F35DD0900399A4B /* metal-number-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-7.png"; sourceTree = "<group>"; };
+		0732138D1F35DD0900399A4B /* metal-number-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-8.png"; sourceTree = "<group>"; };
+		0732138E1F35DD0900399A4B /* metal-number-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-number-9.png"; sourceTree = "<group>"; };
 		07337ED01F3483F60047E99A /* EpisodeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeTest.swift; sourceTree = "<group>"; };
 		07337ED21F34AF900047E99A /* SeasonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonViewController.swift; sourceTree = "<group>"; };
 		07337ED31F34AF900047E99A /* SeasonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeasonViewController.xib; sourceTree = "<group>"; };
@@ -114,6 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073213841F35DD0900399A4B /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				073213851F35DD0900399A4B /* metal-number-0.png */,
+				073213861F35DD0900399A4B /* metal-number-1.png */,
+				073213871F35DD0900399A4B /* metal-number-2.png */,
+				073213881F35DD0900399A4B /* metal-number-3.png */,
+				073213891F35DD0900399A4B /* metal-number-4.png */,
+				0732138A1F35DD0900399A4B /* metal-number-5.png */,
+				0732138B1F35DD0900399A4B /* metal-number-6.png */,
+				0732138C1F35DD0900399A4B /* metal-number-7.png */,
+				0732138D1F35DD0900399A4B /* metal-number-8.png */,
+				0732138E1F35DD0900399A4B /* metal-number-9.png */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
 		0736A2AD1F1412A400B71D1F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +192,7 @@
 		078845681F0EC87E00F0106B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				073213841F35DD0900399A4B /* Numbers */,
 				078845651F0EC87700F0106B /* codeIsComing.png */,
 				0751E7501F1AD5E6001AE9B9 /* greyjoy.png */,
 				078845641F0EC87700F0106B /* lannister.jpg */,
@@ -323,18 +361,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073213971F35DD0900399A4B /* metal-number-7.png in Resources */,
 				07A568B41F1D4A2A0046E484 /* WikiViewController.xib in Resources */,
+				073213931F35DD0900399A4B /* metal-number-3.png in Resources */,
 				078845661F0EC87700F0106B /* lannister.jpg in Resources */,
 				079D5A331F0C47E30027D8F5 /* LaunchScreen.storyboard in Resources */,
+				073213911F35DD0900399A4B /* metal-number-1.png in Resources */,
 				0700B4ED1F141A1500975924 /* HouseViewController.xib in Resources */,
 				07A568BE1F1D668D0046E484 /* HousesViewController.xib in Resources */,
 				0751E7511F1AD5E6001AE9B9 /* greyjoy.png in Resources */,
+				073213981F35DD0900399A4B /* metal-number-8.png in Resources */,
 				079D5A301F0C47E30027D8F5 /* Assets.xcassets in Resources */,
+				073213941F35DD0900399A4B /* metal-number-4.png in Resources */,
+				073213901F35DD0900399A4B /* metal-number-0.png in Resources */,
 				0751E74D1F1AA97B001AE9B9 /* targaryen.png in Resources */,
 				07337ED51F34AF900047E99A /* SeasonViewController.xib in Resources */,
+				073213961F35DD0900399A4B /* metal-number-6.png in Resources */,
+				073213951F35DD0900399A4B /* metal-number-5.png in Resources */,
 				073FD4B71F1E8EB3006290F8 /* MembersViewController.xib in Resources */,
 				078845671F0EC87700F0106B /* codeIsComing.png in Resources */,
+				073213921F35DD0900399A4B /* metal-number-2.png in Resources */,
 				0751E7451F1AA5DA001AE9B9 /* mormont.png in Resources */,
+				073213991F35DD0900399A4B /* metal-number-9.png in Resources */,
 				0751E74F1F1AA9AD001AE9B9 /* tyrell.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
