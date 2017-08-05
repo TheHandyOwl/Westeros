@@ -62,4 +62,23 @@ final class DataSources{
             
         })
     }
+
+    static func episodeDataSource(model: [Episode]) -> ArrayDataSource<Episode>{
+        return ArrayDataSource(model: model, cellMaker: { (episode: Episode, tableView: UITableView) -> UITableViewCell in
+            
+            let cellID = "Episode"
+            var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
+            if cell == nil{
+                cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellID)
+            }
+            
+            
+            cell?.textLabel?.text = episode.description
+            cell?.detailTextLabel?.text = "Premiere Date: \(episode.broadcastDate.formatDate2StringYYYYMMdd())"
+            
+            return cell!
+            
+        })
+    }
+
 }
