@@ -19,16 +19,13 @@ final class Season{
     // OJO: con el toolchain y el private
     private var _episodes : Episodes
     
-    init(numberOf: Int, name: String, releaseDateString2Date: String) {
+    init(numberOf: Int, name: String, releaseDateFromString: String) {
         
         self.numberOf = numberOf
         self.name = name
         
-        // No podemos usar las extensiones hasta que no hayamos inicializado
-        let tempDate = DateFormatter()
-        tempDate.dateFormat = "yyyy-MM-dd"
-        
-        self.releaseDate = tempDate.date(from: releaseDateString2Date)!
+        // Formato personalizado en UIKitExtensions
+        self.releaseDate = releaseDateFromString.formatString2DateYYYYMMdd()
         
         _episodes = Episodes()
         
@@ -54,6 +51,10 @@ extension Season{
         for episode in episodes{
             add(episode: episode)
         }
+    }
+    
+    func  sortedEpisodes() -> [Episode]{
+        return _episodes.sorted()
     }
 
 }
