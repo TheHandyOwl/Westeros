@@ -11,20 +11,34 @@ import XCTest
 
 class RepositoryTests: XCTestCase {
 
+    // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
+    // MARK: - Houses and Persons Variables
     var houses : [House]!
     var lannisterHouse : House?
     var wololoHouse : House?
     
+    // MARK: - Seasons and Episodes Variables
+    var seasons : [Season]!
+    var firstSeason : Season?
+    var wololoSeason : Season?
+    
+    // MARK: - Local Repository Environment
     override func setUp() {
         super.setUp()
         
         localData = Repository.local
         
+        //Houses
         houses = localData.houses
         lannisterHouse = localData.house(named: "Lannister")
         wololoHouse = localData.house(named: "Wololo")
+        
+        //Seasons
+        seasons = localData.seasons
+        firstSeason = localData.season(numbered: 1)
+        wololoSeason = localData.season(numbered: 0)
     
     }
     
@@ -32,10 +46,14 @@ class RepositoryTests: XCTestCase {
         super.tearDown()
     }
     
+    // MARK: - Local Repository Tests
+    
     // Repositorio Local
     func testLocalRepositoryCreation(){
         XCTAssertNotNil(Repository.local)
     }
+    
+    // MARK: - Houses and Persons Tests
     
     // Repositorio Local
     func testLocalRepositoryHousesCreation(){
@@ -89,6 +107,41 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(housesFiltered.count, 1)
     }
     
+    
+    // MARK: - Seasons and Episodes Tests
+    
+    // Existen las temporadas y son 7
+    func testLocalRepositorySeasonsCreation(){
+        XCTAssertNotNil(seasons)
+        XCTAssertEqual(seasons.count, 7)
+    }
+
+    // Devolver la temporada a partir del número
+    func testGetSeasonFromNumber(){
+        XCTAssertNotNil(firstSeason)
+        XCTAssertNil(wololoSeason)
+    }
+
+    // Devolver temporadas ordenadas
+    func testCompareSortedSeasons(){
+        XCTAssertEqual(localData.seasons, localData.seasons.sorted())
+    }
+    
+    // Filtrar una temporada por un parámetro
+    func testSeasonFilter(){
+        var seasonsFiltered : [Season]
+        
+        seasonsFiltered = seasons.filter { $0.count == 10 }
+        XCTAssertEqual(seasonsFiltered.count, 6)
+        seasonsFiltered = localData.seasons(filteredBy: { $0.count == 10 })
+        XCTAssertEqual(seasonsFiltered.count, 6)
+        
+        seasonsFiltered = seasons.filter { $0.count == 7 }
+        XCTAssertEqual(seasonsFiltered.count, 1)
+        seasonsFiltered = localData.seasons(filteredBy: { $0.count == 7 })
+        XCTAssertEqual(seasonsFiltered.count, 1)
+    }
+
 }
 
 

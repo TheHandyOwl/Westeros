@@ -18,11 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Model
         // let houses = Repository.local.houses
-        let season = Season(numberOf: 1, name: "Season 1", releaseDateFromString: "2011-04-17")
-        let episode_1 = Episode(numberOf: 1, title: "Winter Is Coming", broadcastDateFromString: "2011-04-17", episodeFromSeason: season)
-        let episode_2 = Episode(numberOf: 2, title: "The Kingsroad", broadcastDateFromString: "2011-04-18", episodeFromSeason: season)
-        let episode_3 = Episode(numberOf: 3, title: "Lord Snow", broadcastDateFromString: "2011-04-19", episodeFromSeason: season)
-        season.add(episodes: episode_1, episode_2, episode_3)
+        let season = Repository.local.season(numbered: 7)
         
         // Controllers
         /*
@@ -51,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
-        window?.rootViewController = SeasonViewController(model: season)
+        window?.rootViewController = SeasonViewController(model: season!)
         //window?.rootViewController = housesVC
         //window?.rootViewController = tabVC
         //window?.rootViewController = tabVC.wrappedInNavigation()
