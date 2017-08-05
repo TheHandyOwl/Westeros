@@ -18,8 +18,21 @@ final class HousesDelegate: BaseViewControllerDelegate<House>, UITableViewDelega
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let house = source?.element(atIndexPath: indexPath),
             let nav = viewController?.navigationController{
- 
+            
             let vc = HouseViewController(model: house)
+            nav.pushViewController(vc, animated: true)
+        }
+    }
+    
+}
+
+final class SeasonsDelegate: BaseViewControllerDelegate<Season>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let season = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+            
+            let vc = SeasonViewController(model: season)
             nav.pushViewController(vc, animated: true)
         }
     }
