@@ -28,6 +28,26 @@ class SeasonViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func SetupUI(model: Season){
+        let episodes = UIBarButtonItem(title: "Episodes",
+                                   style: .plain,
+                                   target: self,
+                                   action: #selector(displayEpisodes))
+        navigationItem.rightBarButtonItem = episodes
+    }
+    
+    @objc func displayEpisodes(){
+        
+        let episodesDS = DataSources.episodeDataSource(model: model.sortedEpisodes())
+        let episodesVC = ArrayTableViewController(dataSource: episodesDS,
+                                                 delegate: nil,
+                                                 title: "Episodes",
+                                                 style: .plain)
+        
+        navigationController?.pushViewController(episodesVC,
+                                                 animated: true)
+    }
+    
     func syncViewWithModel(){
         seasonNameView.text = model.name
         // Formato personalizado en UIKitExtensions
@@ -41,6 +61,7 @@ class SeasonViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        SetupUI(model: model)
         syncViewWithModel()
     }
 
