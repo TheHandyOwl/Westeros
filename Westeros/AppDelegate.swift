@@ -17,39 +17,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         // Model
-        // let houses = Repository.local.houses
-        let season = Repository.local.season(numbered: 7)
+        let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
+        
+        // DataSources
+        let houseDS = DataSources.houseDataSource(model: houses)
+        let seasonDS = DataSources.seasonDataSource(model: seasons)
         
         // Controllers
-        /*
-        let dataSource = DataSources.houseDataSource(model: houses)
-        */
-        /*
-        let housesVC = ArrayTableViewController(dataSource: dataSource,
+        let housesVC = ArrayTableViewController(dataSource: houseDS,
                                                  delegate: HousesDelegate(),
                                                  title: "Houses",
                                                  style: .plain).wrappedInNavigation()
-        */
-        /*
-        let housesVC1 = ArrayTableViewController(dataSource: dataSource,
-                                                 delegate: HousesDelegate(),
-                                                 title: "Houses",
-                                                 style: .plain).wrappedInNavigation()
-        let housesVC2 = ArrayTableViewController(dataSource: dataSource,
-                                                 delegate: HousesDelegate(),
+        let seasonsVC = ArrayTableViewController(dataSource: seasonDS,
+                                                 delegate: SeasonsDelegate(),
                                                  title: "Seasons",
                                                  style: .plain).wrappedInNavigation()
         let tabVC = UITabBarController()
-        tabVC.viewControllers = [housesVC1, housesVC2]
-        */
-        
+        tabVC.viewControllers = [housesVC, seasonsVC]
+ 
         // Window
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = UIColor.cyan
-        window?.rootViewController = SeasonViewController(model: season!)
+        //window?.rootViewController = SeasonViewController(model: season!)
         //window?.rootViewController = housesVC
-        //window?.rootViewController = tabVC
+        window?.rootViewController = tabVC
         //window?.rootViewController = tabVC.wrappedInNavigation()
         
         return true
