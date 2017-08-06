@@ -13,6 +13,8 @@ class WikiViewController: UIViewController {
     @IBOutlet weak var browserView: UIWebView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     
+    @IBOutlet weak var customLoaderView: UIImageView!
+    
     // Lo hacemos privado para no manipularlo desde fuera
     // Finalmente lo deja como privado
     let model : House
@@ -38,6 +40,10 @@ class WikiViewController: UIViewController {
         activityView.isHidden = false
         activityView.startAnimating()
         
+        //Custom Loader With ImageView
+        customLoaderView.image = UIImage.animatedImageNamed("sprite_LoadingCircle_", duration: 0.5)
+        customLoaderView.isHidden = false
+        
         title = model.name
         
         // Delegado para que funcione el delegado
@@ -62,6 +68,10 @@ extension WikiViewController : UIWebViewDelegate{
         // Aquí detenemos el activity
         activityView.stopAnimating()
         activityView.isHidden = true
+        
+        // Ocultamos la animación
+        customLoaderView.image = nil
+        customLoaderView.isHidden = true
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
