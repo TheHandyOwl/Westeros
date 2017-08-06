@@ -65,9 +65,15 @@ class HouseViewController: UIViewController {
     }
 
     @objc func displayMembers(){
-        // Creamos un WikiVC y lo cargamos en el navigation
+        // Creamos un MembersVC y lo cargamos en el navigation
+        /*
         let membersVC = MembersViewController(model: model.sortedMembers())
-        
+        */
+        let membersDS = DataSources.personDataSource(model: model.sortedMembers())
+        let membersVC = ArrayTableViewController(dataSource: membersDS,
+                                                  delegate: PersonsDelegate(),
+                                                  title: "Person",
+                                                  style: .plain)
         // Lo cargamos en el navigation
         navigationController?.pushViewController(membersVC,
                                                  animated: true)

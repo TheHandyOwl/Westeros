@@ -29,9 +29,9 @@ class EpisodeViewController: UIViewController {
     }
     
     func syncViewWithModel(){
-        seasonView.text = model.episodeFromSeason?.name
-        episodeView.text = model.description
-        premierDataView.text = model.broadcastDate.formatDate2StringYYYYMMdd()  
+        seasonView.text = "Season: " + (model.episodeFromSeason?.name)!
+        episodeView.text = "Episode: " + model.description
+        premierDataView.text = "Broadcast Date: " + model.broadcastDate.formatDate2StringYYYYMMdd()
         
     }
     

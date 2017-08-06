@@ -52,3 +52,17 @@ final class EpisodesDelegate: BaseViewControllerDelegate<Episode>, UITableViewDe
     }
     
 }
+
+
+final class PersonsDelegate: BaseViewControllerDelegate<Person>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let person = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+            
+            let vc = PersonViewController(model: person)
+            nav.pushViewController(vc, animated: true)
+        }
+    }
+    
+}
