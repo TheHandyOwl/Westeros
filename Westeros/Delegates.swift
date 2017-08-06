@@ -38,3 +38,17 @@ final class SeasonsDelegate: BaseViewControllerDelegate<Season>, UITableViewDele
     }
     
 }
+
+
+final class EpisodesDelegate: BaseViewControllerDelegate<Episode>, UITableViewDelegate{
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let episode = source?.element(atIndexPath: indexPath),
+            let nav = viewController?.navigationController{
+            
+            let vc = EpisodeViewController(model: episode)
+            nav.pushViewController(vc, animated: true)
+        }
+    }
+    
+}

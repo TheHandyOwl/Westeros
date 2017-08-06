@@ -232,6 +232,9 @@ final class LocalFactory : HouseFactory, SeasonFactory{
             season7.add(episodes: episode_7_61, episode_7_62, episode_7_63, episode_7_64, episode_7_65, episode_7_66, episode_7_67)
             
             // Esto queda pendiente de comprobar con un test
+            // Pide tan solo 6 temporadas
+            // Y 2 episodios por temporada
+            // Pero ya que estamos ...
              return [season1, season2, season3, season4, season5, season6, season7].sorted()
         }
     }

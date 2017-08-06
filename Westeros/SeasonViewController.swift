@@ -40,7 +40,7 @@ class SeasonViewController: UIViewController {
         
         let episodesDS = DataSources.episodeDataSource(model: model.sortedEpisodes())
         let episodesVC = ArrayTableViewController(dataSource: episodesDS,
-                                                 delegate: nil,
+                                                 delegate: EpisodesDelegate(),
                                                  title: "Episodes",
                                                  style: .plain)
         
@@ -49,6 +49,7 @@ class SeasonViewController: UIViewController {
     }
     
     func syncViewWithModel(){
+        
         seasonNameView.text = model.name
         // Formato personalizado en UIKitExtensions
         releaseDateView.text = model.releaseDate.formatDate2StringYYYYMMdd()
