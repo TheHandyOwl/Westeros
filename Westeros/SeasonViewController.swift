@@ -50,12 +50,12 @@ class SeasonViewController: UIViewController {
     
     func syncViewWithModel(){
         
-        seasonNameView.text = model.name
+        seasonNameView.text = "Season: " + model.name
         // Formato personalizado en UIKitExtensions
-        releaseDateView.text = model.releaseDate.formatDate2StringYYYYMMdd()
+        releaseDateView.text = "Premiere Date: " + model.releaseDate.formatDate2StringYYYYMMdd()
         
         let episodesMultilineText = model.sortedEpisodes().map {$0.description}.joined(separator: "\n")
-        episodesDescriptionView.text = episodesMultilineText
+        episodesDescriptionView.text = "Episodes: " + "\n" + episodesMultilineText
     }
     
     override func viewDidLoad() {
