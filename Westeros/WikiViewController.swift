@@ -13,6 +13,7 @@ class WikiViewController: UIViewController {
     @IBOutlet weak var browserView: UIWebView!
     @IBOutlet weak var activityView: UIActivityIndicatorView!
     
+    // Custom Loader With Image
     @IBOutlet weak var customLoaderView: UIImageView!
     
     // Lo hacemos privado para no manipularlo desde fuera

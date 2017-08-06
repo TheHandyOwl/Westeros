@@ -48,6 +48,8 @@
 		078845671F0EC87700F0106B /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = 078845651F0EC87700F0106B /* codeIsComing.png */; };
 		0788456A1F0ECABB00F0106B /* PersonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078845691F0ECABB00F0106B /* PersonTest.swift */; };
 		0788456C1F0ECDA800F0106B /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0788456B1F0ECDA800F0106B /* Person.swift */; };
+		07902D981F36350400659126 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07902D961F36350400659126 /* EpisodeViewController.swift */; };
+		07902D991F36350400659126 /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07902D971F36350400659126 /* EpisodeViewController.xib */; };
 		079AD8E51F1EA9B300DB5B34 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD8E41F1EA9B300DB5B34 /* ArrayTableViewController.swift */; };
 		079AD8E81F1EAB7600DB5B34 /* DataSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD8E71F1EAB7600DB5B34 /* DataSources.swift */; };
 		079AD8EE1F1EB16B00DB5B34 /* Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079AD8ED1F1EB16B00DB5B34 /* Delegates.swift */; };
@@ -114,6 +116,8 @@
 		078845651F0EC87700F0106B /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
 		078845691F0ECABB00F0106B /* PersonTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTest.swift; sourceTree = "<group>"; };
 		0788456B1F0ECDA800F0106B /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		07902D961F36350400659126 /* EpisodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
+		07902D971F36350400659126 /* EpisodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
 		079AD8E41F1EA9B300DB5B34 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
 		079AD8E71F1EAB7600DB5B34 /* DataSources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSources.swift; sourceTree = "<group>"; };
 		079AD8ED1F1EB16B00DB5B34 /* Delegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegates.swift; sourceTree = "<group>"; };
@@ -171,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				079AD8E61F1EAB5A00DB5B34 /* Generics */,
+				07902D961F36350400659126 /* EpisodeViewController.swift */,
+				07902D971F36350400659126 /* EpisodeViewController.xib */,
 				0700B4EA1F141A1500975924 /* HouseViewController.swift */,
 				0700B4EB1F141A1500975924 /* HouseViewController.xib */,
 				07A568BB1F1D668D0046E484 /* HousesViewController.swift */,
@@ -408,6 +414,7 @@
 				0774C7291F37296300112B1E /* sprite_LoadingCircle_0.png in Resources */,
 				0751E7511F1AD5E6001AE9B9 /* greyjoy.png in Resources */,
 				073213981F35DD0900399A4B /* metal-number-8.png in Resources */,
+				07902D991F36350400659126 /* EpisodeViewController.xib in Resources */,
 				079D5A301F0C47E30027D8F5 /* Assets.xcassets in Resources */,
 				0774C72F1F37296300112B1E /* sprite_LoadingCircle_6.png in Resources */,
 				073213941F35DD0900399A4B /* metal-number-4.png in Resources */,
@@ -445,6 +452,7 @@
 				073FD4B91F1E99EA006290F8 /* ArrayDataSource.swift in Sources */,
 				079AD8EE1F1EB16B00DB5B34 /* Delegates.swift in Sources */,
 				079D5A291F0C47E30027D8F5 /* AppDelegate.swift in Sources */,
+				07902D981F36350400659126 /* EpisodeViewController.swift in Sources */,
 				073FD4B61F1E8EB3006290F8 /* MembersViewController.swift in Sources */,
 				07B89C971F0EF3E0008DE341 /* House.swift in Sources */,
 				0788456C1F0ECDA800F0106B /* Person.swift in Sources */,

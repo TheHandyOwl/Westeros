@@ -35,19 +35,6 @@
                         <constraint firstItem="0b5-PG-oLf" firstAttribute="centerX" secondItem="LUf-jC-Nk7" secondAttribute="centerX" id="gMS-H7-DmU"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="biX-HB-bUh" userLabel="activityView">
-                    <rect key="frame" x="141.5" y="221.5" width="37" height="37"/>
-                    <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-hA-M47">
-                            <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
-                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </activityIndicatorView>
-                    </subviews>
-                    <constraints>
-                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerX" secondItem="biX-HB-bUh" secondAttribute="centerX" id="PKB-8B-MCn"/>
-                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerY" secondItem="biX-HB-bUh" secondAttribute="centerY" id="iVW-QL-Kb3"/>
-                    </constraints>
-                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yU2-bd-PPN" userLabel="customLoaderImageView">
                     <rect key="frame" x="109" y="189" width="102" height="102"/>
                     <subviews>
@@ -58,6 +45,19 @@
                     <constraints>
                         <constraint firstItem="c2l-mf-yff" firstAttribute="centerX" secondItem="yU2-bd-PPN" secondAttribute="centerX" id="1k8-XM-8c7"/>
                         <constraint firstItem="c2l-mf-yff" firstAttribute="centerY" secondItem="yU2-bd-PPN" secondAttribute="centerY" id="vd0-La-1VV"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="biX-HB-bUh" userLabel="activityView">
+                    <rect key="frame" x="141" y="221" width="37" height="37"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="2sc-hA-M47">
+                            <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                            <color key="color" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerX" secondItem="biX-HB-bUh" secondAttribute="centerX" id="PKB-8B-MCn"/>
+                        <constraint firstItem="2sc-hA-M47" firstAttribute="centerY" secondItem="biX-HB-bUh" secondAttribute="centerY" id="iVW-QL-Kb3"/>
                     </constraints>
                 </stackView>
             </subviews>
