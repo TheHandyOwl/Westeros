@@ -72,7 +72,7 @@ class HouseViewController: UIViewController {
         let membersDS = DataSources.personDataSource(model: model.sortedMembers())
         let membersVC = ArrayTableViewController(dataSource: membersDS,
                                                   delegate: PersonsDelegate(),
-                                                  title: "Person",
+                                                  title: "Members",
                                                   style: .plain)
         // Lo cargamos en el navigation
         navigationController?.pushViewController(membersVC,
