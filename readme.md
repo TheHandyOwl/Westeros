@@ -1,4 +1,4 @@
-#[WESTEROS][repo]
+# [WESTEROS][repo]
 
 **Práctica de Fundamentos iOS - V Edición**
 Se ha realizado la parte obligatoria y la parte de genéricos.
@@ -6,10 +6,7 @@ Nota: los controladores en plural son genéricos, y el controlador en singular u
 
 ----------
 
-## Tabla de contenidos
-[TOC]
-
-##Navegación
+## Navegación
 Se respeta la navegación propuesta en el ejercicio, y se detalla a continuación el comportamiento y la forma de acceder a los controladores que no forman parte de las pestañas iniciales:
   - Inicialmente se carga un tabBarController con 2 pestañas: 'Houses' y 'Seasons'
   - Cada controlador genérico se ha envuelto en un navController: 'House' y 'Season'
