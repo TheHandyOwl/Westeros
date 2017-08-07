@@ -3,8 +3,7 @@
 **Práctica de Fundamentos iOS - V Edición**
 
 Se ha realizado la parte obligatoria y la parte de genéricos.
-
-Nota: los controladores en plural son genéricos, y el controlador en singular una vista controladora personalizada.
+>**Nota**: los controladores en plural son genéricos, y el controlador en singular una vista controladora personalizada.
 
 ----------
 
