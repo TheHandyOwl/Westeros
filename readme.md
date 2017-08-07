@@ -1,6 +1,7 @@
 # [WESTEROS][repo]
 
 **Práctica de Fundamentos iOS - V Edición**
+
 Se ha realizado la parte obligatoria y la parte de genéricos.
 Nota: los controladores en plural son genéricos, y el controlador en singular una vista controladora personalizada.
 
@@ -40,8 +41,7 @@ d. Comparable
 
 ## Otros
 1. En el WikiVC hay un 'ActivityController' que se muestra mientras carga la página web. Se implementa lo mismo con una imagen, que irá cargando los distintos frames de un sprite consiguiendo el mismo efecto.
-2. Al cargar la página desaparece la imagen cargada en el punto anterior y se destruye para no ocupar memoria[^ARC].
-  [^ARC]: Descargamos de memoria el conjunto de imágenes y probamos el concepto de ARC.
+2. Al cargar la página desaparece la imagen cargada en el punto anterior y se destruye para no ocupar memoria. Descargamos de memoria el conjunto de imágenes y probamos el concepto de ARC.
 
 
   [repo]: https://github.com/TheHandyOwl/Westeros
