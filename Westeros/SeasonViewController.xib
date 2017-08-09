@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,29 +22,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-Ul-fsw" userLabel="seasonName">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIX-Ul-fsw" userLabel="seasonName">
                     <rect key="frame" x="0.0" y="75" width="375" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Release Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-wV-DBL" userLabel="releaseDate">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Release Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cn-wV-DBL" userLabel="releaseDate">
                     <rect key="frame" x="0.0" y="105" width="375" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Episode 1 Episode 2 Episode n" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="faq-ju-2Ej" userLabel="episodesDescriptionView">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Episode 1 Episode 2 Episode n" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="faq-ju-2Ej" userLabel="episodesDescriptionView">
                     <rect key="frame" x="0.0" y="135" width="375" height="435"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="105" id="2yQ-P7-Qbl"/>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="5al-g9-3MN"/>
+                <constraint firstAttribute="bottom" secondItem="faq-ju-2Ej" secondAttribute="bottom" constant="97" id="6Iv-Pd-nVZ"/>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="leading" secondItem="PIX-Ul-fsw" secondAttribute="leading" id="AGa-Cu-bu0"/>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="leading" secondItem="faq-ju-2Ej" secondAttribute="leading" id="Mwa-Y2-AuK"/>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="top" secondItem="PIX-Ul-fsw" secondAttribute="bottom" constant="9" id="c3F-Bl-Wob"/>
+                <constraint firstItem="faq-ju-2Ej" firstAttribute="top" secondItem="0cn-wV-DBL" secondAttribute="bottom" constant="9" id="huH-gO-nrs"/>
+                <constraint firstItem="PIX-Ul-fsw" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ljL-Z2-6dk"/>
+                <constraint firstItem="0cn-wV-DBL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vOI-8D-wKB"/>
+                <constraint firstItem="faq-ju-2Ej" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="vTt-Hr-cPa"/>
+            </constraints>
             <point key="canvasLocation" x="35.5" y="89.5"/>
         </view>
     </objects>

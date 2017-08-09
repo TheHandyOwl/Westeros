@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,29 +22,37 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-zi-LrA">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7c-zi-LrA">
                     <rect key="frame" x="0.0" y="75" width="375" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Episode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAE-hH-uUG">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAE-hH-uUG">
                     <rect key="frame" x="0.0" y="105" width="375" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Premiere Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2P-m6-GPl">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Premiere Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2P-m6-GPl">
                     <rect key="frame" x="0.0" y="135" width="375" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VAE-hH-uUG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0EV-PI-9Es"/>
+                <constraint firstItem="y2P-m6-GPl" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="2Kl-z9-E5R"/>
+                <constraint firstItem="VAE-hH-uUG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="JVo-Ar-jIi"/>
+                <constraint firstItem="VAE-hH-uUG" firstAttribute="top" secondItem="g7c-zi-LrA" secondAttribute="bottom" constant="9" id="NH9-RJ-Atz"/>
+                <constraint firstItem="VAE-hH-uUG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="105" id="YcE-74-mDF"/>
+                <constraint firstItem="g7c-zi-LrA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ftx-gh-aaU"/>
+                <constraint firstItem="y2P-m6-GPl" firstAttribute="top" secondItem="VAE-hH-uUG" secondAttribute="bottom" constant="9" id="jBv-93-BP8"/>
+                <constraint firstItem="g7c-zi-LrA" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="oOg-vO-SW9"/>
+                <constraint firstItem="y2P-m6-GPl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="om2-8S-lU7"/>
+            </constraints>
             <point key="canvasLocation" x="34.5" y="54.5"/>
         </view>
     </objects>

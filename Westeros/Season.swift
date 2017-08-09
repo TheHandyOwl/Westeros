@@ -8,7 +8,13 @@
 
 import UIKit
 
+
+// MARK: - Environment
+
 typealias Episodes = Set<Episode>
+
+
+// MARK: - Season Class
 
 final class Season{
     
@@ -49,6 +55,9 @@ final class Season{
     }
 
 }
+
+
+// MARK: - Season Extensions
 
 extension Season{
 

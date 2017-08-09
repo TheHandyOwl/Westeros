@@ -11,6 +11,7 @@ import XCTest
 
 class SeasonTest: XCTestCase {
     
+    // MARK: - Environment
     
     // Repo
     var localData : LocalFactory!
@@ -53,6 +54,9 @@ class SeasonTest: XCTestCase {
     func testSeasonExistence() {
         XCTAssertNotNil(season1)
     }
+    
+    
+    // MARK: - Tests
     
     func testAddEpisodes() {
         

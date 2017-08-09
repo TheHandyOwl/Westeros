@@ -11,6 +11,9 @@ import XCTest
 
 class EpisodeTest: XCTestCase {
     
+    
+    // MARK: - Environment
+    
     // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
@@ -48,6 +51,8 @@ class EpisodeTest: XCTestCase {
         super.tearDown()
     }
     
+    
+    // MARK: - Tests
     
     func testEpisodeExistence() {
         XCTAssertNotNil(episode_1_1)
