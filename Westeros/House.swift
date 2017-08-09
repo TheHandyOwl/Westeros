@@ -8,13 +8,18 @@
 
 import UIKit
 
-// MARK: - Classes
+
+// MARK: - Environment
+
 // typealias House = String
 // typealias Sigil = String
 // typealias Character = String
 typealias Words = String
 // Como no tenemos claro el tipo de dato que será 'Members', por el momento hacemos un conjunto de personas
 typealias Members = Set<Person>
+
+
+// MARK: - House Class
 
 final class House{
     
@@ -42,6 +47,9 @@ final class Sigil{
     }
 }
 
+
+
+// MARK: - House Extensions
 
 extension House{
     var count : Int{

@@ -11,6 +11,9 @@ import XCTest
 
 class RepositoryTests: XCTestCase {
 
+    
+    // MARK: - Environment
+    
     // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
@@ -46,6 +49,9 @@ class RepositoryTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    
+    // MARK: - Tests
     
     // MARK: - Local Repository Tests
     

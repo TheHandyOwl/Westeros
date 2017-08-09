@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - HouseVC Class
+
 class HouseViewController: UIViewController {
 
     @IBOutlet weak var houseNameView: UILabel!

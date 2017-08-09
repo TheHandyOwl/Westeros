@@ -11,6 +11,9 @@ import XCTest
 
 class HouseTest: XCTestCase {
     
+    
+    // MARK: - Environment
+    
     // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
@@ -45,6 +48,9 @@ class HouseTest: XCTestCase {
         super.tearDown()
     }
 
+    
+    // MARK: - Tests
+    
     func testHouseExistence(){
         XCTAssertNotNil(starkHouse)
     }

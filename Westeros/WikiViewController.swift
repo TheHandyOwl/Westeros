@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - WikiVC Class
+
 class WikiViewController: UIViewController {
 
     @IBOutlet weak var browserView: UIWebView!
@@ -62,6 +65,9 @@ class WikiViewController: UIViewController {
     }
     
 }
+
+
+// MARK: - WikiVC Extensions
 
 extension WikiViewController : UIWebViewDelegate{
     

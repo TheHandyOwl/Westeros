@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// MARK: - Person Class
+
 final class Person{
     
     let name    : String
@@ -56,6 +59,7 @@ final class Person{
 }
 
 
+// MARK: - Person Extensions
 
 // Dejamos la clase y el resto de funcionalidades las metemos en extensiones
 extension Person{
