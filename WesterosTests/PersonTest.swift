@@ -11,6 +11,9 @@ import XCTest
 
 class PersonTest: XCTestCase {
     
+    
+    // MARK: - Environment
+    
     // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
@@ -56,6 +59,9 @@ class PersonTest: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    
+    // MARK: - Tests
     
     func testPersonExistence(){
         // let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)

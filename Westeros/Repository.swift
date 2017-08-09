@@ -15,7 +15,7 @@ final class Repository{
     
 }
 
-// MARK: - Protocols
+// MARK: - House Protocols
 protocol HouseFactory {
     
     var houses : [House] { get }
@@ -28,6 +28,8 @@ protocol HouseFactory {
     func houses(filteredBy: HouseFilter) -> [House]
     
 }
+
+// MARK: - Season Protocols
 
 protocol SeasonFactory {
     
@@ -241,6 +243,8 @@ final class LocalFactory : HouseFactory, SeasonFactory{
 
 }
 
+// MARK: - LocalFactory Extensions
+
 extension LocalFactory{
     func house(named: String) -> House?{
         // Ambas sirven
@@ -281,6 +285,8 @@ extension LocalFactory{
     }
    
 }
+
+// MARK: - Functions
 
 func EqualToHouseName(_ house: House) -> Bool {
     return (house.name == "Stark" ? true : false)

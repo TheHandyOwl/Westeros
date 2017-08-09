@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - UIVC Extensions
+
 extension UIViewController{
     
     func wrappedInNavigation() -> UINavigationController{
@@ -16,6 +19,9 @@ extension UIViewController{
     }
     
 }
+
+
+// MARK: - String Extensions
 
 extension String{
     
@@ -27,6 +33,9 @@ extension String{
     }
     
 }
+
+
+// MARK: - Date Extensions
 
 extension Date{
     

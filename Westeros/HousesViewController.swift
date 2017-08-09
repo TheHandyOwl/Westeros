@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - HousesVC Class
+
 class HousesViewController: UITableViewController {
 
     let model : [House]

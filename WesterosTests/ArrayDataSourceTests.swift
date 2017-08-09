@@ -11,6 +11,9 @@ import XCTest
 
 class ArrayDataSourceTests: XCTestCase {
     
+    
+    // MARK: - Environment
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -21,7 +24,10 @@ class ArrayDataSourceTests: XCTestCase {
         super.tearDown()
     }
     
-    // Test para la clausura del array
+    
+    // MARK: - Tests
+    
+    // MARK: - ArrayDataSource Test
     func testArrayDataSourceCreation(){
         
         // Omitimos la variable tableView 

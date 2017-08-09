@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - Episode Class
+
 final class Episode{
     
     let numberOf : Int
@@ -32,6 +34,9 @@ final class Episode{
     }
     
 }
+
+
+// MARK: - Episode Extensions
 
 extension Episode {
     var proxyTitle: String{

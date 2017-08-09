@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - MembersVC Class
+
 class MembersViewController: UITableViewController {
     
     let model : [Person]

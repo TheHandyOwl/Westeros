@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// MARK: - EpisodeVC Class
+
 class EpisodeViewController: UIViewController {
 
     @IBOutlet weak var seasonView: UILabel!
