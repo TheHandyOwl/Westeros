@@ -11,6 +11,7 @@ import XCTest
 
 class HouseTest: XCTestCase {
     
+    // MARK: - Local Repository Variables
     var localData : LocalFactory!
     
     var starkSigil : Sigil!
@@ -59,13 +60,16 @@ class HouseTest: XCTestCase {
     func testAddPersons(){
         //XCTAssertEqual(starkHouse.count, 0)
         XCTAssertEqual(starkHouse.count, 5)
-        starkHouse.add(person: robb)
+        starkHouse.add(person: robb) // Esta persona ya está añadida
         
         //XCTAssertEqual(starkHouse.count, 1)
         XCTAssertEqual(starkHouse.count, 5)
-        starkHouse.add(person: arya)
+        starkHouse.add(person: arya) // Esta persona ya está añadida
         
         //XCTAssertEqual(starkHouse.count, 2)
+        XCTAssertEqual(starkHouse.count, 5)
+        
+        starkHouse.add(persons: robb, arya)  // Estas personas ya están añadidan
         XCTAssertEqual(starkHouse.count, 5)
         
         starkHouse.add(person: tyrion) // Esto es erróneo porque no pertenece a esta casa
@@ -83,7 +87,7 @@ class HouseTest: XCTestCase {
     }
     
     // Solución para el test House - Equality
-    func testPersonEquality(){
+    func testHouseEquality(){
         
         //Identidad
         XCTAssertEqual(starkHouse, starkHouse)
@@ -108,6 +112,23 @@ class HouseTest: XCTestCase {
         XCTAssertLessThanOrEqual(lannisterHouse, lannisterHouse)
         XCTAssertGreaterThan(starkHouse, lannisterHouse)
         XCTAssertGreaterThanOrEqual(starkHouse, starkHouse)
+    }
+    
+    func testPersonsOfHouseSorted(){
+        XCTAssertEqual(starkHouse.sortedMembers().sorted(), starkHouse.sortedMembers())
+    }
+    
+    func testWikiUrls() {
+        let urls : [URL] = localData.houses.map{ $0.wikiURL }
+        for url in urls {
+            XCTAssertNotNil(url)
+        }
+    }
+    
+    func testImagesHouses() {
+        for house in localData.houses {
+            XCTAssertNotNil(house.sigil.image)
+        }
     }
     
 }

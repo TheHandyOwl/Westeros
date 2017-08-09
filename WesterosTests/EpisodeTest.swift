@@ -11,6 +11,8 @@ import XCTest
 
 class EpisodeTest: XCTestCase {
     
+    // MARK: - Local Repository Variables
+    var localData : LocalFactory!
     
     // Seasons
     var season1 : Season!
@@ -27,6 +29,8 @@ class EpisodeTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        localData = Repository.local
         
         season1 = Season(numberOf: 1, name: "Season 1", releaseDateFromString: "2011-04-17")
         season2 = Season(numberOf: 2, name: "Season 2", releaseDateFromString: "2012-04-01")
@@ -47,6 +51,10 @@ class EpisodeTest: XCTestCase {
     
     func testEpisodeExistence() {
         XCTAssertNotNil(episode_1_1)
+    }
+    
+    func testHashableEpisode() {
+        XCTAssertNotNil(episode_1_1.hashValue)
     }
     
     func testEpisodeEquality(){
