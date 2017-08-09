@@ -11,6 +11,9 @@ import XCTest
 
 class PersonTest: XCTestCase {
     
+    // MARK: - Local Repository Variables
+    var localData : LocalFactory!
+    
     var starkImage : UIImage!
     var lannisterImage : UIImage!
     
@@ -30,6 +33,8 @@ class PersonTest: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
+        localData = Repository.local
+
         starkImage = #imageLiteral(resourceName: "codeIsComing.png")
         lannisterImage = #imageLiteral(resourceName: "lannister.jpg")
         
@@ -64,6 +69,10 @@ class PersonTest: XCTestCase {
         // Para evitar el conflicto de Character vs Westeros.Character
         // Lo suyo es refactorizar
         XCTAssertEqual(tyrion.fullName, "Tyrion Lannister")
+    }
+    
+    func testHashablePerson() {
+        XCTAssertNotNil(robb.hashValue)
     }
     
     // Mi solución para el test Person

@@ -28,6 +28,7 @@ class RepositoryTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
+        // Repo
         localData = Repository.local
         
         //Houses
@@ -37,8 +38,8 @@ class RepositoryTests: XCTestCase {
         
         //Seasons
         seasons = localData.seasons
-        firstSeason = localData.season(numbered: 1)
-        wololoSeason = localData.season(numbered: 0)
+        firstSeason = localData.season(numbered: 1) // Sí que existe
+        wololoSeason = localData.season(numbered: 0) // No existe
     
     }
     
@@ -107,6 +108,23 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(housesFiltered.count, 1)
     }
     
+    func testHouseNamed() {
+        
+        let houseOne = localData.houses[0].name
+        let personOne = localData.house(named: houseOne)?.sortedMembers().first
+        let houseTwo = localData.houses[1].name
+        let personTwo = localData.house(named: houseTwo)?.sortedMembers().first
+        
+        XCTAssertNotNil(localData.house(named: houseOne))
+        XCTAssertNotNil(localData.house(named: houseTwo))
+        XCTAssertEqual(personOne?.house, localData.house(named: houseOne))
+        XCTAssertEqual(personTwo?.house, localData.house(named: houseTwo))
+        XCTAssertEqual(localData.house(named: houseOne), localData.house(named: houseOne))
+        XCTAssertNotEqual(personOne?.house, localData.house(named: houseTwo))
+        XCTAssertNil(localData.house(named: "WololoHouse"))
+        
+    }
+    
     
     // MARK: - Seasons and Episodes Tests
     
@@ -126,7 +144,7 @@ class RepositoryTests: XCTestCase {
     func testCompareSortedSeasons(){
         XCTAssertEqual(localData.seasons, localData.seasons.sorted())
     }
-    
+
     // Filtrar una temporada por un parámetro
     func testSeasonFilter(){
         var seasonsFiltered : [Season]
