@@ -11,6 +11,10 @@ import XCTest
 
 class SeasonTest: XCTestCase {
     
+    
+    // Repo
+    var localData : LocalFactory!
+    
     // Seasons
     var season1 : Season!
     var season2 : Season!
@@ -26,6 +30,8 @@ class SeasonTest: XCTestCase {
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+        localData = Repository.local
         
         season1 = Season(numberOf: 1, name: "Season 1", releaseDateFromString: "2011-04-17")
         season2 = Season(numberOf: 2, name: "Season 2", releaseDateFromString: "2012-04-01")
@@ -74,6 +80,10 @@ class SeasonTest: XCTestCase {
         
     }
     
+    func testHashableSeason() {
+        XCTAssertNotNil(season1.hashValue)
+    }
+    
     func testSeasonEquality(){
         
         //Comparación
@@ -96,6 +106,13 @@ class SeasonTest: XCTestCase {
     
     func testSeasonDescription(){
         XCTAssertEqual(season1.description, "<T1> Season 1")
+    }
+    
+    func testSeasonsImages() {
+        let numberImages = localData.seasons.map { $0.numberImage }
+        for numberImage in numberImages {
+            XCTAssertNotNil(numberImage)
+        }
     }
     
 }

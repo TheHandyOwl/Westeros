@@ -21,7 +21,7 @@ extension String{
     
     func formatString2DateYYYYMMdd() -> Date{
         let tempDate = DateFormatter()
-        tempDate.dateFormat = "YYYY-MM-dd"
+        tempDate.dateFormat = "YYYY/MM/dd"
         
         return tempDate.date(from: self)!
     }
@@ -32,7 +32,7 @@ extension Date{
     
     func formatDate2StringYYYYMMdd() -> String{
         let tempDate = DateFormatter()
-        tempDate.dateFormat = "YYYY-MM-dd"
+        tempDate.dateFormat = "YYYY/MM/dd"
         
         return tempDate.string(from: self)
     }
