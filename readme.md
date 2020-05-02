@@ -1,6 +1,10 @@
-# [WESTEROS][repo]
+# [WESTEROS][repoMeteorologySwift5]
 
 **Práctica de Fundamentos iOS - V Edición**
+
+**Nota**: [Nueva versión funcionando en Swift 5 en el repositorio MeteorologySwift5] [repoMeteorologySwift5]
+
+----------
 
 Se ha realizado la parte obligatoria y la parte de genéricos.
 >**Nota**: los controladores en plural son genéricos, y el controlador en singular una vista controladora personalizada.
@@ -44,4 +48,4 @@ d. Comparable
 2. Al cargar la página desaparece la imagen cargada en el punto anterior y se destruye para no ocupar memoria. Descargamos de memoria el conjunto de imágenes y probamos el concepto de ARC.
 
 
-  [repo]: https://github.com/TheHandyOwl/Westeros
+  [repoMeteorologySwift5]: https://github.com/TheHandyOwl/MeteorologySwift5
