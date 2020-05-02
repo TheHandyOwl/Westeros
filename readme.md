@@ -2,7 +2,7 @@
 
 **Práctica de Fundamentos iOS - V Edición**
 
-**Nota**: [Nueva versión funcionando en Swift 5 en el repositorio MeteorologySwift5] [repoMeteorologySwift5]
+**Nota**: [Nueva versión funcionando en Swift 5 en el repositorio MeteorologySwift5][repoMeteorologySwift5]
 
 ----------
 
